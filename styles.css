@@ -1,111 +1,28 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلوره شوب</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #b3cde0, #e0d6f7);
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+/* تصميم الشعار */
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #4a90e2; /* الأزرق الهادئ */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 20px;
+}
 
-        header {
-            background-color: #b3cde0;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+/* تأثير بسيط على الشعار */
+.logo:hover {
+    color: #3a7bcf; /* تغيير اللون عند التمرير */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        /* تخصيص الشعار */
-        .logo {
-            max-width: 150px; /* تحجيم الشعار */
-            height: auto;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        .main-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            text-align: center;
-        }
-
-        .product-card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .product-card h3 {
-            font-size: 1.5em;
-            color: #4f4f4f;
-        }
-
-        .product-card p {
-            color: #7d7d7d;
-        }
-
-        .btn {
-            background-color: #b3cde0;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background-color: #8ab2c6;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- إضافة الشعار هنا -->
-        <img src="path-to-your-logo.png" alt="شعار بلوره" class="logo">
-        <span>بلوره شوب</span>
-    </header>
-
-    <div class="main-content">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300" alt="منتج 1">
-            <h3>منتج 1</h3>
-            <p>وصف المنتج هنا</p>
-            <button class="btn">شراء الآن</button>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300" alt="منتج 2">
-            <h3>منتج 2</h3>
-            <p>وصف المنتج هنا</p>
-            <button class="btn">شراء الآن</button>
-        </div>
-    </div>
-</body>
-</html>
+/* خلفية بسيطة */
+body {
+    background-color: #f4f8fc; /* خلفية بلون هادئ */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
