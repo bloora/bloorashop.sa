@@ -1,32 +1,74 @@
-/* تصميم الشعار */
-.logo {
-    font-family: 'Arial', sans-serif;
-    font-size: 60px;  /* زيادة الحجم ليكون أكثر بروزًا */
-    font-weight: bold;
-    color: #4a90e2;  /* اللون الأزرق الهادئ */
-    text-transform: uppercase;
-    letter-spacing: 3px;  /* زيادة المسافة بين الحروف */
-    text-align: center;
-    padding: 30px;  /* إضافة مساحة حول الشعار */
-    background: linear-gradient(135deg, #4a90e2, #6fa3e6);  /* خلفية بتدرج لوني */
-    border-radius: 10px;  /* إضافة حواف دائرية */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* إضافة ظل خفيف */
-}
-
-/* تأثير عند التمرير (Hover Effect) */
-.logo:hover {
-    color: #3a7bcf; /* تغيير اللون عند التمرير */
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  /* إضافة تأثير ظل للنص */
-}
-
-/* إعدادات الصفحة */
+/* إعدادات الخطوط والألوان */
 body {
-    background-color: #f4f8fc;  /* خلفية هادئة */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* خلفية فاتحة باردة */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
+}
+
+/* تصميم رأس الصفحة */
+.header {
+    background: linear-gradient(135deg, #4a90e2, #a1b4c8); /* تدرج من الأزرق إلى الرمادي الفاتح */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header .logo {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0; /* تغيير اللون عند التمرير */
+}
+
+/* تصميم محتوى الصفحة */
+.main-content {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #d3e1f1, #f0f4f7); /* تدرج لوني بارد */
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* تصميم تذييل الصفحة */
+.footer {
+    text-align: center;
+    background-color: #a1b4c8; /* اللون الرمادي الفاتح */
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
 }
