@@ -1,28 +1,32 @@
 /* تصميم الشعار */
 .logo {
     font-family: 'Arial', sans-serif;
-    font-size: 48px;
+    font-size: 60px;  /* زيادة الحجم ليكون أكثر بروزًا */
     font-weight: bold;
-    color: #4a90e2; /* الأزرق الهادئ */
+    color: #4a90e2;  /* اللون الأزرق الهادئ */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;  /* زيادة المسافة بين الحروف */
     text-align: center;
-    padding: 20px;
+    padding: 30px;  /* إضافة مساحة حول الشعار */
+    background: linear-gradient(135deg, #4a90e2, #6fa3e6);  /* خلفية بتدرج لوني */
+    border-radius: 10px;  /* إضافة حواف دائرية */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* إضافة ظل خفيف */
 }
 
-/* تأثير بسيط على الشعار */
+/* تأثير عند التمرير (Hover Effect) */
 .logo:hover {
     color: #3a7bcf; /* تغيير اللون عند التمرير */
-    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  /* إضافة تأثير ظل للنص */
 }
 
-/* خلفية بسيطة */
+/* إعدادات الصفحة */
 body {
-    background-color: #f4f8fc; /* خلفية بلون هادئ */
+    background-color: #f4f8fc;  /* خلفية هادئة */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Arial', sans-serif;
 }
