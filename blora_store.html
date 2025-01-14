@@ -1,0 +1,77 @@
+def generate_html(products):
+    html_content = """
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>متجر بلوره</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #FAADB6;
+                color: #333;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+            .product {
+                background-color: white;
+                margin: 10px;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            .product h2 {
+                font-size: 20px;
+                color: #FAADB6;
+            }
+            .product p {
+                font-size: 18px;
+            }
+            .product .price {
+                font-size: 18px;
+                color: green;
+            }
+            .product .selling-price {
+                font-size: 20px;
+                font-weight: bold;
+                color: #E74C3C;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>مرحباً في متجر بلوره</h1>
+        <div id="products">
+    """
+    
+    # إضافة كل منتج
+    for product in products:
+        html_content += f"""
+        <div class="product">
+            <img src="{product['image_url']}" alt="{product['name']}">
+            <h2>{product['name']}</h2>
+            <p>السعر الأصلي: {product['price']} ر.س</p>
+            <p class="price">السعر بعد إضافة هامش الربح: {product['selling_price']} ر.س</p>
+            <p><a href="https://www.amazon.sa/dp/{product['asin']}" target="_blank">شراء الآن</a></p>
+        </div>
+        """
+    
+    html_content += """
+        </div>
+    </body>
+    </html>
+    """
+    
+    # حفظ المحتوى في ملف HTML
+    with open("blora_store.html", "w", encoding="utf-8") as file:
+        file.write(html_content)
