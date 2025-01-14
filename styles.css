@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #f5a7b8; /* وردي فاتح */
+  --secondary-color: #e6e6e6; /* رمادي فاتح */
+  --accent-color: #4caf50; /* أخضر هادئ */
+  --text-color: #333;
+  --background-color: #ffffff;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.product {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product h3 {
+  margin: 15px 0;
+}
+
+.product p {
+  font-size: 1.2em;
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
