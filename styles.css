@@ -1,76 +1,111 @@
-:root {
-  --primary-color: #f5a7b8; /* وردي فاتح */
-  --secondary-color: #e6e6e6; /* رمادي فاتح */
-  --accent-color: #4caf50; /* أخضر هادئ */
-  --text-color: #333;
-  --background-color: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلوره شوب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #b3cde0, #e0d6f7);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
+        header {
+            background-color: #b3cde0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-header {
-  background-color: var(--primary-color);
-  padding: 20px 0;
-  text-align: center;
-}
+        /* تخصيص الشعار */
+        .logo {
+            max-width: 150px; /* تحجيم الشعار */
+            height: auto;
+        }
 
-header h1 {
-  font-size: 2.5em;
-  color: white;
-  font-weight: bold;
-}
+        header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
 
-section {
-  padding: 40px 20px;
-}
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            text-align: center;
+        }
 
-.product {
-  display: inline-block;
-  width: 200px;
-  margin: 10px;
-  background-color: var(--secondary-color);
-  text-align: center;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
-.product:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
-}
+        .product-card:hover {
+            transform: scale(1.05);
+        }
 
-.product img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-.product h3 {
-  margin: 15px 0;
-}
+        .product-card h3 {
+            font-size: 1.5em;
+            color: #4f4f4f;
+        }
 
-.product p {
-  font-size: 1.2em;
-  color: var(--accent-color);
-}
+        .product-card p {
+            color: #7d7d7d;
+        }
 
-button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+        .btn {
+            background-color: #b3cde0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
-button:hover {
-  background-color: #45a049;
-}
+        .btn:hover {
+            background-color: #8ab2c6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- إضافة الشعار هنا -->
+        <img src="path-to-your-logo.png" alt="شعار بلوره" class="logo">
+        <span>بلوره شوب</span>
+    </header>
+
+    <div class="main-content">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="منتج 1">
+            <h3>منتج 1</h3>
+            <p>وصف المنتج هنا</p>
+            <button class="btn">شراء الآن</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="منتج 2">
+            <h3>منتج 2</h3>
+            <p>وصف المنتج هنا</p>
+            <button class="btn">شراء الآن</button>
+        </div>
+    </div>
+</body>
+</html>
