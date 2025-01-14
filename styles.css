@@ -1,9 +1,10 @@
-/* إعدادات الخطوط والألوان */
+/* إعدادات الخطوط والألوان الأساسية */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9; /* خلفية فاتحة باردة */
+    background-color: #f4f6f9; /* خلفية فاتحة لراحة العين */
     margin: 0;
     padding: 0;
+    color: #333; /* نص بلون داكن لسهولة القراءة */
 }
 
 /* تصميم رأس الصفحة */
@@ -14,13 +15,15 @@ body {
     padding: 20px 0;
 }
 
-.header .logo {
-    font-size: 48px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+/* تخصيص صورة الشعار */
+.logo-img {
+    width: 150px;  /* تحديد عرض الصورة */
+    height: auto;  /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 8px;  /* إضافة حواف دائرية للصورة */
+    margin-bottom: 10px;  /* إضافة مسافة تحت الصورة */
 }
 
+/* تصميم الروابط في القائمة */
 nav ul {
     list-style: none;
     padding: 0;
