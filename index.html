@@ -37,12 +37,12 @@
         /* تأثير الألماس المتساقط */
         @keyframes fall {
             0% {
-                transform: translateY(-100px);
                 opacity: 1;
+                transform: translateY(-50px);
             }
             100% {
-                transform: translateY(100vh);
                 opacity: 0;
+                transform: translateY(100vh);
             }
         }
 
@@ -54,7 +54,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0;
-            animation: fall 5s linear infinite;
+            animation: fall 5s ease-in-out infinite;
         }
 
         /* النص */
