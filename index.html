@@ -10,69 +10,47 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9; /* خلفية بيضاء فاتحة */
             text-align: center;
+            color: #333; /* النص باللون الأسود */
         }
 
         .header {
-            background-color: #d3e0ea;
-            padding: 50px;
-            border-bottom: 2px solid #aab8c2;
+            background-color: #ffffff; /* خلفية بيضاء */
+            padding: 60px;
+            border-bottom: 2px solid #e0e0e0; /* خط رفيع بلون رمادي فاتح */
             position: relative;
         }
 
         .header img {
-            width: 160px;
-            height: 160px;
+            width: 200px; /* زيادة حجم الشعار */
+            height: 200px;
             border-radius: 50%;
-            border: 5px solid #aab8c2;
+            border: none; /* إزالة الحدود حول الشعار */
         }
 
         .header h1 {
-            font-size: 36px;
-            color: #4f5d75;
+            font-size: 42px; /* زيادة حجم الخط */
+            color: #333; /* النص باللون الأسود */
             margin-top: 20px;
-        }
-
-        /* تصحيح @keyframes */
-        @keyframes fall {
-            0% {
-                opacity: 1;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(100vh);
-            }
-        }
-
-        .diamond {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-image: url('https://l.top4top.io/p_33030umro1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0;
-            animation: fall 5s ease-in-out forwards; /* استخدام forwards لتثبيت الألماس عند اختفائه */
         }
 
         .content p {
             font-size: 24px;
-            color: #4f5d75;
+            color: #555; /* لون نص رقيق يناسب الأبيض */
             margin-top: 50px;
         }
 
         .footer {
-            background-color: #d3e0ea;
+            background-color: #ffffff;
             padding: 30px;
             text-align: center;
             color: #333;
-            border-top: 2px solid #aab8c2;
+            border-top: 2px solid #e0e0e0;
         }
 
         .btn {
-            background-color: #4f5d75;
+            background-color: #333; /* زر باللون الأسود */
             padding: 12px 20px;
             font-size: 18px;
             border: none;
@@ -84,25 +62,23 @@
         }
 
         .btn:hover {
-            background-color: #3b475b;
+            background-color: #444; /* زر أغمق عند التمرير عليه */
+        }
+
+        .content {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-
-    <audio id="falling-sound" autoplay>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
 
     <div class="header">
         <img src="https://h.top4top.io/p_3302vn29q1.jpg" alt="شعار بلورة">
         <h1>مرحبًا بكم في متجر بلورة</h1>
     </div>
 
-    <div id="diamond-container"></div>
-
     <div class="content">
-        <p>أفضل المنتجات بأناقة تناسب الجميع!</p>
+        <p id="welcome-message">أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.</p>
         <a href="#" class="btn">اكتشف المزيد</a>
     </div>
 
@@ -111,31 +87,23 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById("diamond-container");
+        const messages = [
+            "أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.",
+            "مرحبًا بك في متجر بلورة، حيث تجد كل ما يرضيك.",
+            "شكرًا لزيارتك لمتجر بلورة! نتمنى لك وقتًا ممتعًا.",
+            "أهلًا وسهلًا! هنا تجد أفضل المنتجات بأفضل الأسعار."
+        ];
 
-            // تشغيل الصوت فقط عند تحميل الصفحة
-            const sound = document.getElementById('falling-sound');
-            setTimeout(() => {
-                sound.pause();
-            }, 5000); // إيقاف الصوت بعد 5 ثواني
+        let counter = 0;
+        const messageElement = document.getElementById("welcome-message");
 
-            // توليد الألماس عند تحميل الصفحة
-            function createDiamond() {
-                let diamond = document.createElement('div');
-                diamond.classList.add('diamond');
-                diamond.style.left = ${Math.random() * 100}%;
-                diamond.style.animationDuration = ${Math.random() * 5 + 3}s; 
-                container.appendChild(diamond);
+        function changeMessage() {
+            messageElement.textContent = messages[counter];
+            counter = (counter + 1) % messages.length;
+        }
 
-                setTimeout(() => {
-                    diamond.remove();
-                }, 5000); // يختفي الألماس بعد 5 ثواني
-            }
-
-            // إنشاء الألماس مرة واحدة عند تحميل الصفحة
-            createDiamond();
-        });
+        // تغيير الرسالة كل 5 ثواني
+        setInterval(changeMessage, 5000);
     </script>
 
 </body>
