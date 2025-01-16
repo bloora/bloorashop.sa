@@ -10,14 +10,14 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #f4f4f4; /* لون خلفية هادئ */
+            background-color: #f4f4f4;
             text-align: center;
         }
 
         .header {
-            background-color: #d3e0ea; /* لون أزرق فاتح مناسب */
+            background-color: #d3e0ea;
             padding: 50px;
-            border-bottom: 2px solid #aab8c2; /* لون أزرق داكن خفيف */
+            border-bottom: 2px solid #aab8c2;
             position: relative;
         }
 
@@ -25,16 +25,15 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            border: 5px solid #aab8c2; /* نفس اللون الداكن ليعطي توازن */
+            border: 5px solid #aab8c2;
         }
 
         .header h1 {
             font-size: 36px;
-            color: #4f5d75; /* لون رمادي داكن */
+            color: #4f5d75;
             margin-top: 20px;
         }
 
-        /* تأثير الألماس المتساقط */
         @keyframes fall {
             0% {
                 opacity: 1;
@@ -50,14 +49,13 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-image: url('https://l.top4top.io/p_33030umro1.png'); /* رابط الألماس */
+            background-image: url('https://l.top4top.io/p_33030umro1.png');
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0;
-            animation: fall 5s ease-in-out infinite;
+            animation: fall 5s ease-in-out;
         }
 
-        /* النص */
         .content p {
             font-size: 24px;
             color: #4f5d75;
@@ -72,9 +70,8 @@
             border-top: 2px solid #aab8c2;
         }
 
-        /* زر */
         .btn {
-            background-color: #4f5d75; /* نفس اللون الرمادي الداكن */
+            background-color: #4f5d75;
             padding: 12px 20px;
             font-size: 18px;
             border: none;
@@ -86,13 +83,13 @@
         }
 
         .btn:hover {
-            background-color: #3b475b; /* تدرج أغمق قليلاً */
+            background-color: #3b475b;
         }
     </style>
 </head>
 <body>
 
-    <audio id="falling-sound" autoplay loop>
+    <audio id="falling-sound" autoplay>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
@@ -101,7 +98,6 @@
         <h1>مرحبًا بكم في متجر بلورة</h1>
     </div>
 
-    <!-- تشكيل الألماس المتساقط باستخدام جافا سكريبت -->
     <div id="diamond-container"></div>
 
     <div class="content">
@@ -114,28 +110,31 @@
     </div>
 
     <script>
-        // تشغيل الصوت تلقائيًا عند فتح الصفحة
-        document.getElementById('falling-sound').play();
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById("diamond-container");
 
-        // توليد الألماس المتساقط بشكل عشوائي
-        const container = document.getElementById("diamond-container");
-
-        function createDiamond() {
-            let diamond = document.createElement('div');
-            diamond.classList.add('diamond');
-            // تحديد موضع الألماس بشكل عشوائي
-            diamond.style.left = ${Math.random() * 100}%; 
-            diamond.style.animationDuration = ${Math.random() * 5 + 3}s; // تغيير سرعة تساقط الألماس
-            container.appendChild(diamond);
-
-            // حذف الألماس بعد انتهائه
+            // تشغيل الصوت فقط عند تحميل الصفحة
+            const sound = document.getElementById('falling-sound');
             setTimeout(() => {
-                diamond.remove();
-            }, 5000); // يختفي بعد 5 ثواني
-        }
+                sound.pause();
+            }, 5000); // إيقاف الصوت بعد 5 ثواني
 
-        // إنشاء الألماس المتساقط كل 0.5 ثانية
-        setInterval(createDiamond, 500);
+            // توليد الألماس عند تحميل الصفحة
+            function createDiamond() {
+                let diamond = document.createElement('div');
+                diamond.classList.add('diamond');
+                diamond.style.left = ${Math.random() * 100}%;
+                diamond.style.animationDuration = ${Math.random() * 5 + 3}s; 
+                container.appendChild(diamond);
+
+                setTimeout(() => {
+                    diamond.remove();
+                }, 5000); // يختفي الألماس بعد 5 ثواني
+            }
+
+            // إنشاء الألماس مرة واحدة عند تحميل الصفحة
+            createDiamond();
+        });
     </script>
 
 </body>
