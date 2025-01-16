@@ -34,6 +34,7 @@
             margin-top: 20px;
         }
 
+        /* تصحيح @keyframes */
         @keyframes fall {
             0% {
                 opacity: 1;
@@ -53,7 +54,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0;
-            animation: fall 5s ease-in-out;
+            animation: fall 5s ease-in-out forwards; /* استخدام forwards لتثبيت الألماس عند اختفائه */
         }
 
         .content p {
