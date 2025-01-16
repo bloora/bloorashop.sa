@@ -7,42 +7,60 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f7f6; /* لون خلفية هادئ دافئ */
-            color: #555; /* لون نص غامق معتدل */
+            background-color: #f8f8f8; /* خلفية فاتحة هادئة */
+            color: #333; /* نص غامق لسهولة القراءة */
             margin: 0;
             padding: 0;
+            background-image: url('https://l.top4top.io/p_33030umro1.jpg'); /* رابط صورة الألماس المبعثر */
+            background-repeat: no-repeat;
+            background-position: bottom right; /* جعل الألماس في زاوية معينة */
+            background-size: 10%; /* تصغير حجم الألماس */
+            opacity: 0.1; /* تأثير الشفافية لتوزيع الألماس */
         }
         .header {
-            background-color: #d1e8d1; /* لون هادئ يشبه الأخضر الفاتح */
+            background-color: #333; /* خلفية داكنة */
             padding: 40px;
             text-align: center;
-            border-bottom: 2px solid #b0d0b0; /* حد خفيف بلون أخضر هادئ */
+            border-bottom: 3px solid #ccc; /* حد خفيف بلون رمادي فاتح */
+            position: relative;
         }
         .header img {
-            width: 180px; /* زيادة حجم الصورة */
-            height: auto;
-            border-radius: 10px; /* حواف دائرية */
+            width: 180px; /* حجم الصورة */
+            height: 180px;
+            border-radius: 50%; /* جعل الصورة دائرية */
+            border: 5px solid #ff99cc; /* حد وردي حول الصورة */
         }
         .header h1 {
             margin: 20px 0 0;
             font-size: 32px;
-            color: #4a7c4f; /* لون أخضر دافئ يتناسب مع الشعار */
+            color: #ff99cc; /* لون وردي مميز للعناوين */
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ffccff; /* خلفية وردية فاتحة خلف الشعار */
+            opacity: 0.2; /* شفافية لتأثير ناعم */
+            pointer-events: none; /* التأثير لا يتداخل مع المحتوى */
         }
         .content {
             text-align: center;
             margin: 60px auto;
             font-size: 20px;
-            color: #333; /* لون نص غامق قليلاً */
+            color: #555; /* لون نص معتدل */
         }
         .footer {
-            background-color: #ffffff; /* خلفية بيضاء لجزء الفوتر */
+            background-color: #333; /* خلفية داكنة مع اللون الأسود */
             padding: 30px;
             text-align: center;
-            border-top: 2px solid #f0f0f0; /* حد خفيف جداً */
+            color: #fff; /* نص أبيض للفوتر */
+            border-top: 3px solid #ccc; /* حد رمادي فاتح */
         }
-        /* إضافة زر أنيق ولطيف */
         .btn {
-            background-color: #4a7c4f; /* نفس اللون الأخضر الدافئ */
+            background-color: #ff99cc; /* زر بلون وردي */
             color: white;
             padding: 12px 25px;
             font-size: 20px;
@@ -50,9 +68,10 @@
             border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
-            background-color: #3d6540; /* تدرج لون أخضر غامق عند التمرير */
+            background-color: #ff66b2; /* تدرج وردي عند التمرير */
         }
     </style>
 </head>
@@ -65,7 +84,7 @@
 
     <div class="content">
         <p>أفضل المنتجات بأناقة تناسب الجميع!</p>
-        <a href="#" class="btn">اكتشف المزيد</a> <!-- زر أنيق للمستخدم -->
+        <a href="#" class="btn">اكتشف المزيد</a>
     </div>
 
     <div class="footer">
