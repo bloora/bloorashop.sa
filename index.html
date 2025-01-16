@@ -6,60 +6,102 @@
     <title>متجر بلورة</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #f1f1f1;
-        }
-        .header {
-            background-color: #ffebf2;
-            padding: 40px;
+            background-color: #f4f4f4; /* لون خلفية هادئ */
             text-align: center;
-            border-bottom: 3px solid #ffb3cc;
-            position: relative;
-        }
-        .header img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid #ff99cc;
-        }
-        .header h1 {
-            margin: 20px 0 0;
-            font-size: 32px;
-            color: #ff99cc;
         }
 
-        /* Animation for falling diamonds */
+        .header {
+            background-color: #d3e0ea; /* لون أزرق فاتح مناسب */
+            padding: 50px;
+            border-bottom: 2px solid #aab8c2; /* لون أزرق داكن خفيف */
+            position: relative;
+        }
+
+        .header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid #aab8c2; /* نفس اللون الداكن ليعطي توازن */
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #4f5d75; /* لون رمادي داكن */
+            margin-top: 20px;
+        }
+
+        /* تأثير الألماس المتساقط */
         @keyframes fall {
-            0% { top: -100px; opacity: 1; }
-            100% { top: 100%; opacity: 0; }
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
         }
 
         .diamond {
             position: absolute;
             width: 50px;
             height: 50px;
-            background-image: url('https://example.com/diamond.png'); /* رابط الألماس بدون خلفية */
+            background-image: url('https://example.com/diamond.png'); /* رابط الألماس */
             background-size: contain;
             background-repeat: no-repeat;
-            opacity: 1;
-            animation: fall 5s linear infinite;
+            opacity: 0;
+            animation: fall 4s linear infinite;
         }
 
-        /* إضافة مواقع عشوائية للألماس */
+        /* توزيع الألماس بشكل عشوائي */
         .diamond:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .diamond:nth-child(2) { left: 30%; animation-delay: 1s; }
-        .diamond:nth-child(3) { left: 50%; animation-delay: 2s; }
-        .diamond:nth-child(4) { left: 70%; animation-delay: 3s; }
-        .diamond:nth-child(5) { left: 90%; animation-delay: 4s; }
+        .diamond:nth-child(2) { left: 25%; animation-delay: 1s; }
+        .diamond:nth-child(3) { left: 40%; animation-delay: 2s; }
+        .diamond:nth-child(4) { left: 55%; animation-delay: 3s; }
+        .diamond:nth-child(5) { left: 70%; animation-delay: 4s; }
+        .diamond:nth-child(6) { left: 85%; animation-delay: 5s; }
+
+        /* النص */
+        .content p {
+            font-size: 24px;
+            color: #4f5d75;
+            margin-top: 50px;
+        }
+
+        .footer {
+            background-color: #d3e0ea;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+            border-top: 2px solid #aab8c2;
+        }
+
+        /* زر */
+        .btn {
+            background-color: #4f5d75; /* نفس اللون الرمادي الداكن */
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #3b475b; /* تدرج أغمق قليلاً */
+        }
     </style>
 </head>
 <body>
 
-    <audio id="falling-sound" autoplay>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> <!-- رابط الصوت -->
+    <audio id="falling-sound" autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <div class="header">
@@ -68,22 +110,24 @@
     </div>
 
     <!-- تشكيل الألماس المتساقط -->
-    <div class="diamond" id="diamond1"></div>
-    <div class="diamond" id="diamond2"></div>
-    <div class="diamond" id="diamond3"></div>
-    <div class="diamond" id="diamond4"></div>
-    <div class="diamond" id="diamond5"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
 
-    <div class="content" style="text-align: center; margin-top: 100px;">
+    <div class="content">
         <p>أفضل المنتجات بأناقة تناسب الجميع!</p>
+        <a href="#" class="btn">اكتشف المزيد</a>
     </div>
 
-    <div class="footer" style="background-color: #ffebf2; padding: 30px; text-align: center; color: #333;">
+    <div class="footer">
         <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
     </div>
 
     <script>
-        // تأكد من تحميل الصوت بشكل صحيح
+        // تأكد من تشغيل الصوت تلقائيًا عند فتح الصفحة
         document.getElementById('falling-sound').play();
     </script>
 
