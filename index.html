@@ -7,89 +7,84 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* خلفية فاتحة هادئة */
-            color: #333; /* نص غامق لسهولة القراءة */
             margin: 0;
             padding: 0;
-            background-image: url('https://l.top4top.io/p_33030umro1.jpg'); /* رابط صورة الألماس المبعثر */
-            background-repeat: no-repeat;
-            background-position: bottom right; /* جعل الألماس في زاوية معينة */
-            background-size: 10%; /* تصغير حجم الألماس */
-            opacity: 0.1; /* تأثير الشفافية لتوزيع الألماس */
+            overflow: hidden;
+            background-color: #f1f1f1;
         }
         .header {
-            background-color: #333; /* خلفية داكنة */
+            background-color: #ffebf2;
             padding: 40px;
             text-align: center;
-            border-bottom: 3px solid #ccc; /* حد خفيف بلون رمادي فاتح */
+            border-bottom: 3px solid #ffb3cc;
             position: relative;
         }
         .header img {
-            width: 180px; /* حجم الصورة */
+            width: 180px;
             height: 180px;
-            border-radius: 50%; /* جعل الصورة دائرية */
-            border: 5px solid #ff99cc; /* حد وردي حول الصورة */
+            border-radius: 50%;
+            border: 5px solid #ff99cc;
         }
         .header h1 {
             margin: 20px 0 0;
             font-size: 32px;
-            color: #ff99cc; /* لون وردي مميز للعناوين */
+            color: #ff99cc;
         }
-        .header::before {
-            content: "";
+
+        /* Animation for falling diamonds */
+        @keyframes fall {
+            0% { top: -100px; opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        .diamond {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #ffccff; /* خلفية وردية فاتحة خلف الشعار */
-            opacity: 0.2; /* شفافية لتأثير ناعم */
-            pointer-events: none; /* التأثير لا يتداخل مع المحتوى */
+            width: 50px;
+            height: 50px;
+            background-image: url('https://example.com/diamond.png'); /* رابط الألماس بدون خلفية */
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: fall 4s infinite;
         }
-        .content {
-            text-align: center;
-            margin: 60px auto;
-            font-size: 20px;
-            color: #555; /* لون نص معتدل */
-        }
-        .footer {
-            background-color: #333; /* خلفية داكنة مع اللون الأسود */
-            padding: 30px;
-            text-align: center;
-            color: #fff; /* نص أبيض للفوتر */
-            border-top: 3px solid #ccc; /* حد رمادي فاتح */
-        }
-        .btn {
-            background-color: #ff99cc; /* زر بلون وردي */
-            color: white;
-            padding: 12px 25px;
-            font-size: 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #ff66b2; /* تدرج وردي عند التمرير */
-        }
+
+        /* Animation delay for different diamonds */
+        .diamond:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .diamond:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .diamond:nth-child(3) { left: 50%; animation-delay: 2s; }
+        .diamond:nth-child(4) { left: 70%; animation-delay: 3s; }
+        .diamond:nth-child(5) { left: 90%; animation-delay: 4s; }
     </style>
 </head>
 <body>
+
+    <audio id="falling-sound" autoplay>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> <!-- رابط الصوت -->
+    </audio>
 
     <div class="header">
         <img src="https://h.top4top.io/p_3302vn29q1.jpg" alt="شعار بلورة">
         <h1>مرحبًا بكم في متجر بلورة</h1>
     </div>
 
-    <div class="content">
+    <div class="diamond" id="diamond1"></div>
+    <div class="diamond" id="diamond2"></div>
+    <div class="diamond" id="diamond3"></div>
+    <div class="diamond" id="diamond4"></div>
+    <div class="diamond" id="diamond5"></div>
+
+    <div class="content" style="text-align: center; margin-top: 100px;">
         <p>أفضل المنتجات بأناقة تناسب الجميع!</p>
-        <a href="#" class="btn">اكتشف المزيد</a>
     </div>
 
-    <div class="footer">
+    <div class="footer" style="background-color: #ffebf2; padding: 30px; text-align: center; color: #333;">
         <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
     </div>
+
+    <script>
+        // تأكد من تحميل الصوت بشكل صحيح
+        document.getElementById('falling-sound').play();
+    </script>
 
 </body>
 </html>
