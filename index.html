@@ -44,11 +44,11 @@
             background-image: url('https://example.com/diamond.png'); /* رابط الألماس بدون خلفية */
             background-size: contain;
             background-repeat: no-repeat;
-            opacity: 0;
-            animation: fall 4s infinite;
+            opacity: 1;
+            animation: fall 5s linear infinite;
         }
 
-        /* Animation delay for different diamonds */
+        /* إضافة مواقع عشوائية للألماس */
         .diamond:nth-child(1) { left: 10%; animation-delay: 0s; }
         .diamond:nth-child(2) { left: 30%; animation-delay: 1s; }
         .diamond:nth-child(3) { left: 50%; animation-delay: 2s; }
@@ -67,6 +67,7 @@
         <h1>مرحبًا بكم في متجر بلورة</h1>
     </div>
 
+    <!-- تشكيل الألماس المتساقط -->
     <div class="diamond" id="diamond1"></div>
     <div class="diamond" id="diamond2"></div>
     <div class="diamond" id="diamond3"></div>
