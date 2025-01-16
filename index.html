@@ -50,20 +50,12 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-image: url('https://example.com/diamond.png'); /* رابط الألماس */
+            background-image: url('https://l.top4top.io/p_33030umro1.png'); /* رابط الألماس */
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0;
-            animation: fall 4s linear infinite;
+            animation: fall 5s linear infinite;
         }
-
-        /* توزيع الألماس بشكل عشوائي */
-        .diamond:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .diamond:nth-child(2) { left: 25%; animation-delay: 1s; }
-        .diamond:nth-child(3) { left: 40%; animation-delay: 2s; }
-        .diamond:nth-child(4) { left: 55%; animation-delay: 3s; }
-        .diamond:nth-child(5) { left: 70%; animation-delay: 4s; }
-        .diamond:nth-child(6) { left: 85%; animation-delay: 5s; }
 
         /* النص */
         .content p {
@@ -109,13 +101,8 @@
         <h1>مرحبًا بكم في متجر بلورة</h1>
     </div>
 
-    <!-- تشكيل الألماس المتساقط -->
-    <div class="diamond"></div>
-    <div class="diamond"></div>
-    <div class="diamond"></div>
-    <div class="diamond"></div>
-    <div class="diamond"></div>
-    <div class="diamond"></div>
+    <!-- تشكيل الألماس المتساقط باستخدام جافا سكريبت -->
+    <div id="diamond-container"></div>
 
     <div class="content">
         <p>أفضل المنتجات بأناقة تناسب الجميع!</p>
@@ -127,8 +114,28 @@
     </div>
 
     <script>
-        // تأكد من تشغيل الصوت تلقائيًا عند فتح الصفحة
+        // تشغيل الصوت تلقائيًا عند فتح الصفحة
         document.getElementById('falling-sound').play();
+
+        // توليد الألماس المتساقط بشكل عشوائي
+        const container = document.getElementById("diamond-container");
+
+        function createDiamond() {
+            let diamond = document.createElement('div');
+            diamond.classList.add('diamond');
+            // تحديد موضع الألماس بشكل عشوائي
+            diamond.style.left = ${Math.random() * 100}%; 
+            diamond.style.animationDuration = ${Math.random() * 5 + 3}s; // تغيير سرعة تساقط الألماس
+            container.appendChild(diamond);
+
+            // حذف الألماس بعد انتهائه
+            setTimeout(() => {
+                diamond.remove();
+            }, 5000); // يختفي بعد 5 ثواني
+        }
+
+        // إنشاء الألماس المتساقط كل 0.5 ثانية
+        setInterval(createDiamond, 500);
     </script>
 
 </body>
