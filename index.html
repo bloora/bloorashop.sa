@@ -1,136 +1,136 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>متجر بلورة</title>
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f9f9f9; /* خلفية بيضاء فاتحة */
-                text-align: center;
-                color: #333; /* النص باللون الأسود */
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر بلورة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* خلفية بيضاء فاتحة */
+            text-align: center;
+            color: #333; /* النص باللون الأسود */
+        }
 
-            .header {
-                background-color: #ffffff; /* خلفية بيضاء */
-                padding: 60px;
-                border-bottom: 2px solid #e0e0e0; /* خط رفيع بلون رمادي فاتح */
-                position: relative;
-            }
+        .header {
+            background-color: #ffffff; /* خلفية بيضاء */
+            padding: 60px;
+            border-bottom: 2px solid #e0e0e0; /* خط رفيع بلون رمادي فاتح */
+            position: relative;
+        }
 
+        .header img {
+            width: 150px; /* عرض الصورة */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+            margin: 0 auto;
+            display: block; /* توسيط الصورة */
+        }
+
+        .header h1 {
+            font-size: 36px; /* حجم الخط */
+            color: #333; /* النص باللون الأسود */
+            margin-top: 20px;
+        }
+
+        .content p {
+            font-size: 24px;
+            color: #555; /* لون نص رقيق يناسب الأبيض */
+            margin-top: 50px;
+        }
+
+        .footer {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .btn {
+            background-color: #333; /* زر باللون الأسود */
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #444; /* زر أغمق عند التمرير عليه */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* تغيير التصميم للأجهزة الصغيرة */
+        @media (max-width: 768px) {
             .header img {
-                width: 150px; /* عرض الصورة */
-                height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-                margin: 0 auto;
-                display: block; /* توسيط الصورة */
+                width: 120px; /* تصغير حجم الصورة */
             }
 
             .header h1 {
-                font-size: 36px; /* حجم الخط */
-                color: #333; /* النص باللون الأسود */
-                margin-top: 20px;
+                font-size: 28px; /* تصغير حجم الخط */
             }
 
             .content p {
-                font-size: 24px;
-                color: #555; /* لون نص رقيق يناسب الأبيض */
-                margin-top: 50px;
+                font-size: 20px; /* تصغير النص */
+            }
+        }
+
+        /* تكبير الشعار للأجهزة الكبيرة */
+        @media (min-width: 1200px) {
+            .header img {
+                width: 200px; /* تكبير حجم الصورة */
             }
 
-            .footer {
-                background-color: #ffffff;
-                padding: 30px;
-                text-align: center;
-                color: #333;
-                border-top: 2px solid #e0e0e0;
+            .header h1 {
+                font-size: 42px; /* تكبير النص */
             }
+        }
+    </style>
+</head>
+<body>
 
-            .btn {
-                background-color: #333; /* زر باللون الأسود */
-                padding: 12px 20px;
-                font-size: 18px;
-                border: none;
-                border-radius: 8px;
-                color: white;
-                cursor: pointer;
-                text-decoration: none;
-                margin-top: 20px;
-            }
+    <div class="header">
+        <!-- تضمين صورة الألماسة -->
+        <img src="https://h.top4top.io/p_3302vn29q1.png" alt="ألماسة متجر بلورة">
+        <h1>مرحبًا بكم في متجر بلورة</h1>
+    </div>
 
-            .btn:hover {
-                background-color: #444; /* زر أغمق عند التمرير عليه */
-            }
+    <div class="content">
+        <p id="welcome-message">أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.</p>
+        <a href="#" class="btn">اكتشف المزيد</a>
+    </div>
 
-            .content {
-                padding: 20px;
-            }
+    <div class="footer">
+        <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
+    </div>
 
-            /* تغيير التصميم للأجهزة الصغيرة */
-            @media (max-width: 768px) {
-                .header img {
-                    width: 120px; /* تصغير حجم الصورة */
-                }
+    <script>
+        const messages = [
+            "أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.",
+            "مرحبًا بك في متجر بلورة، حيث تجد كل ما يرضيك.",
+            "شكرًا لزيارتك لمتجر بلورة! نتمنى لك وقتًا ممتعًا.",
+            "أهلًا وسهلًا! هنا تجد أفضل المنتجات بأفضل الأسعار."
+        ];
 
-                .header h1 {
-                    font-size: 28px; /* تصغير حجم الخط */
-                }
+        let counter = 0;
+        const messageElement = document.getElementById("welcome-message");
 
-                .content p {
-                    font-size: 20px; /* تصغير النص */
-                }
-            }
+        function changeMessage() {
+            messageElement.textContent = messages[counter];
+            counter = (counter + 1) % messages.length;
+        }
 
-            /* تكبير الشعار للأجهزة الكبيرة */
-            @media (min-width: 1200px) {
-                .header img {
-                    width: 200px; /* تكبير حجم الصورة */
-                }
+        // تغيير الرسالة كل 5 ثواني
+        setInterval(changeMessage, 5000);
+    </script>
 
-                .header h1 {
-                    font-size: 42px; /* تكبير النص */
-                }
-            }
-        </style>
-    </head>
-    <body>
-
-        <div class="header">
-            <!-- تضمين صورة الألماسة -->
-            <img src="YOUR_IMAGE_URL" alt="ألماسة متجر بلورة">
-            <h1>مرحبًا بكم في متجر بلورة</h1>
-        </div>
-
-        <div class="content">
-            <p id="welcome-message">أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.</p>
-            <a href="#" class="btn">اكتشف المزيد</a>
-        </div>
-
-        <div class="footer">
-            <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
-        </div>
-
-        <script>
-            const messages = [
-                "أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.",
-                "مرحبًا بك في متجر بلورة، حيث تجد كل ما يرضيك.",
-                "شكرًا لزيارتك لمتجر بلورة! نتمنى لك وقتًا ممتعًا.",
-                "أهلًا وسهلًا! هنا تجد أفضل المنتجات بأفضل الأسعار."
-            ];
-
-            let counter = 0;
-            const messageElement = document.getElementById("welcome-message");
-
-            function changeMessage() {
-                messageElement.textContent = messages[counter];
-                counter = (counter + 1) % messages.length;
-            }
-
-            // تغيير الرسالة كل 5 ثواني
-            setInterval(changeMessage, 5000);
-        </script>
-
-    </body>
+</body>
 </html>
