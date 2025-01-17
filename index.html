@@ -4,111 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بلورة</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0d0d0d;
-            color: white;
-            overflow: hidden;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #00bcd4; /* لون يتماشى مع الألوان في الصورة */
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: fadeIn 3s ease-in-out infinite;
-        }
-
-        /* تحريك البلورات */
-        .crystals {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://i.top4top.io/p_3304ybnwd1.jpg');
-            background-size: cover;
-            background-position: center;
-            animation: moveCrystals 30s linear infinite;
-        }
-
-        @keyframes moveCrystals {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* تأثيرات الظهور للصورة */
-        .background-image {
-            width: 100%;
-            height: 100vh; /* يغطي كامل الشاشة */
-            background-image: url('https://i.top4top.io/p_3304ybnwd1.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(60%);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        .content {
-            position: relative;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .content p {
-            font-size: 1.5em;
-            line-height: 1.6;
-            color: #f1f1f1;
-            margin-top: 20px;
-        }
-
-        /* تنسيق النصوص مع الأجهزة المختلفة */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .content p {
-                font-size: 1.2em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .content p {
-                font-size: 1em;
-            }
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">المنتجات</a></li>
+                <li><a href="#">التسجيل دخول</a></li>
+                <li><a href="#">سلة المشتريات</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="background-image"></div>
+    <section class="intro">
+        <div class="intro-content">
+            <h1>مرحبا بكم في متجر بلورة</h1>
+            <p>اكتشف أفضل المنتجات مع تجربة تسوق فريدة.</p>
+        </div>
+    </section>
 
-    <div class="content">
-        <header>
-            <h1>بلورة</h1>
-        </header>
-        <div class="crystals"></div>
-        <p>مرحبًا بك في متجر بلورة! استمتع بتجربة فريدة من نوعها</p>
-    </div>
-
+    <footer class="footer">
+        <p>حقوق الطبع والنشر © 2025 بلورة</p>
+    </footer>
 </body>
 </html>
