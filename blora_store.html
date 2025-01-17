@@ -1,77 +1,222 @@
-def generate_html(products):
-    html_content = """
-    <html lang="ar">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>متجر بلوره</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #FAADB6;
-                color: #333;
-                padding: 20px;
-            }
-            h1 {
-                text-align: center;
-                color: #333;
-            }
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر بلورة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-image: url('https://i.top4top.io/p_3304ybnwd1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+            color: white;
+            padding: 80px 0;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            width: 24%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .product-info p {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .product-info button {
+            background-color: #1d72b8;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.2em;
+        }
+        .product-info button:hover {
+            background-color: #155a8a;
+        }
+        .search-bar, .comment-box, .login-box, .cart-button {
+            margin: 20px 0;
+        }
+        .search-bar input, .comment-box textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .search-bar button, .comment-box button {
+            background-color: #1d72b8;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            font-size: 1.1em;
+        }
+        .search-bar button:hover, .comment-box button:hover {
+            background-color: #155a8a;
+        }
+        .cart-button {
+            background-color: #1d72b8;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+            margin: 30px auto;
+            display: block;
+            font-size: 1.2em;
+        }
+        .cart-button:hover {
+            background-color: #155a8a;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
             .product {
-                background-color: white;
-                margin: 10px;
-                padding: 15px;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 300px;
-                display: inline-block;
-                margin-bottom: 20px;
+                width: 48%;
             }
-            .product h2 {
-                font-size: 20px;
-                color: #FAADB6;
-            }
-            .product p {
-                font-size: 18px;
-            }
-            .product .price {
-                font-size: 18px;
-                color: green;
-            }
-            .product .selling-price {
-                font-size: 20px;
-                font-weight: bold;
-                color: #E74C3C;
-            }
-            img {
+        }
+        @media (max-width: 480px) {
+            .product {
                 width: 100%;
-                height: auto;
-                border-radius: 8px;
             }
-        </style>
-    </head>
-    <body>
-        <h1>مرحباً في متجر بلوره</h1>
-        <div id="products">
-    """
-    
-    # إضافة كل منتج
-    for product in products:
-        html_content += f"""
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>متجر بلورة</h1>
+    </header>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#login">تسجيل الدخول</a>
+        <a href="#cart">سلة المشتريات</a>
+        <a href="#search">بحث</a>
+    </nav>
+
+    <div class="content">
+        <!-- iPhone 16 Pro 128GB -->
         <div class="product">
-            <img src="{product['image_url']}" alt="{product['name']}">
-            <h2>{product['name']}</h2>
-            <p>السعر الأصلي: {product['price']} ر.س</p>
-            <p class="price">السعر بعد إضافة هامش الربح: {product['selling_price']} ر.س</p>
-            <p><a href="https://www.amazon.sa/dp/{product['asin']}" target="_blank">شراء الآن</a></p>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 128GB">
+            <div class="product-info">
+                <h3>iPhone 16 Pro 128GB</h3>
+                <p>اللون: فضي، أسود، أزرق</p>
+                <p>السعر الأصلي: 4249 ريال</p>
+                <p>السعر مع الربح (10%): 4673.90 ريال</p>
+                <a href="https://www.amazon.sa" target="_blank">
+                    <button>اشترِ الآن من أمازون</button>
+                </a>
+            </div>
         </div>
-        """
-    
-    html_content += """
+
+        <!-- iPhone 16 Pro 256GB -->
+        <div class="product">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 256GB">
+            <div class="product-info">
+                <h3>iPhone 16 Pro 256GB</h3>
+                <p>اللون: فضي، أسود، أزرق</p>
+                <p>السعر الأصلي: 4699 ريال</p>
+                <p>السعر مع الربح (10%): 5168.90 ريال</p>
+                <a href="https://www.amazon.sa" target="_blank">
+                    <button>اشترِ الآن من أمازون</button>
+                </a>
+            </div>
         </div>
-    </body>
-    </html>
-    """
-    
-    # حفظ المحتوى في ملف HTML
-    with open("blora_store.html", "w", encoding="utf-8") as file:
-        file.write(html_content)
+
+        <!-- iPhone 16 Pro 512GB -->
+        <div class="product">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 512GB">
+            <div class="product-info">
+                <h3>iPhone 16 Pro 512GB</h3>
+                <p>اللون: فضي، أسود، أزرق</p>
+                <p>السعر الأصلي: 5979 ريال</p>
+                <p>السعر مع الربح (15%): 6866.85 ريال</p>
+                <a href="https://www.amazon.sa" target="_blank">
+                    <button>اشترِ الآن من أمازون</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- iPhone 16 Pro 1TB -->
+        <div class="product">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 1TB">
+            <div class="product-info">
+                <h3>iPhone 16 Pro 1TB</h3>
+                <p>اللون: فضي، أسود، أزرق</p>
+                <p>السعر الأصلي: 6699 ريال</p>
+                <p>السعر مع الربح (15%): 7693.85 ريال</p>
+                <a href="https://www.amazon.sa" target="_blank">
+                    <button>اشترِ الآن من أمازون</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 متجر بلورة. جميع الحقوق محفوظة.</p>
+    </div>
+
+</body>
+</html>
