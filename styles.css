@@ -16,9 +16,23 @@
     align-items: center;
 }
 
+/* حركة الشعار */
 .logo {
-    width: 150px;
+    width: 80px;
     height: auto;
+    animation: logoAnimation 2s ease-out forwards; /* حركة الشعار */
+}
+
+/* تعريف حركة الشعار */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0); /* بداية الشعار صغير */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* تكبير الشعار إلى الحجم الطبيعي */
+        opacity: 1;
+    }
 }
 
 .navbar ul {
