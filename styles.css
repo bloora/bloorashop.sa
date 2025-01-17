@@ -16,21 +16,26 @@
     align-items: center;
 }
 
-/* حركة الشعار */
+/* تنسيق حركة الشعار */
 .logo {
     width: 80px;
     height: auto;
-    animation: logoAnimation 2s ease-out forwards; /* حركة الشعار */
+    animation: logoAnimation 1.5s ease-out forwards;
+    transform-origin: center center;
 }
 
-/* تعريف حركة الشعار */
+/* تأثير الحركة */
 @keyframes logoAnimation {
     0% {
-        transform: scale(0); /* بداية الشعار صغير */
-        opacity: 0;
+        transform: scale(0); /* الشعار في البداية صغير جداً */
+        opacity: 0; /* الشعار غير مرئي */
+    }
+    50% {
+        transform: scale(1.2); /* تكبير الشعار قليلاً */
+        opacity: 1;
     }
     100% {
-        transform: scale(1); /* تكبير الشعار إلى الحجم الطبيعي */
+        transform: scale(1); /* العودة للحجم الطبيعي */
         opacity: 1;
     }
 }
