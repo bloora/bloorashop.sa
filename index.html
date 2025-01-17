@@ -22,13 +22,13 @@
                 position: relative;
             }
 
-            .header img {
-                width: 20vw; /* عرض الشعار بنسبة 20% من عرض الشاشة */
-                max-width: 300px; /* أقصى عرض للشعار */
-                min-width: 100px; /* أقل عرض للشعار */
-                height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-                border-radius: 50%; /* إزالة الحواف */
-                border: none; /* بدون حدود */
+            .header .diamond {
+                width: 100px;
+                height: 100px;
+                background: #E8CEB0; /* لون البيج */
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* شكل الألماسة */
+                margin: 0 auto;
+                border: 3px solid black; /* الحواف السوداء */
             }
 
             .header h1 {
@@ -71,31 +71,31 @@
                 padding: 20px;
             }
 
-            /* تغيير الشعار والخط للأجهزة الصغيرة */
+            /* تغيير التصميم للأجهزة الصغيرة */
             @media (max-width: 768px) {
-                .header img {
-                    width: 30vw; /* تكبير الشعار على الشاشات الصغيرة */
-                    max-width: 200px; /* تحديد أقصى حجم للشعار */
+                .header .diamond {
+                    width: 70px; /* تصغير حجم الألماسة */
+                    height: 70px;
                 }
 
                 .header h1 {
-                    font-size: 28px; /* تصغير حجم الخط قليلاً */
+                    font-size: 28px; /* تصغير حجم الخط */
                 }
 
                 .content p {
-                    font-size: 20px; /* تصغير النص لتناسب الشاشات الصغيرة */
+                    font-size: 20px; /* تصغير النص */
                 }
             }
 
             /* تكبير الشعار للأجهزة الكبيرة */
             @media (min-width: 1200px) {
-                .header img {
-                    width: 15vw; /* تقليل العرض بالنسبة للشاشات الكبيرة */
-                    max-width: 400px; /* زيادة الحد الأقصى للشعار */
+                .header .diamond {
+                    width: 150px; /* تكبير حجم الألماسة */
+                    height: 150px;
                 }
 
                 .header h1 {
-                    font-size: 42px; /* تكبير النص قليلاً */
+                    font-size: 42px; /* تكبير النص */
                 }
             }
         </style>
@@ -103,7 +103,7 @@
     <body>
 
         <div class="header">
-            <img src="https://h.top4top.io/p_3302vn29q1.jpg" alt="شعار بلورة">
+            <div class="diamond"></div>
             <h1>مرحبًا بكم في متجر بلورة</h1>
         </div>
 
