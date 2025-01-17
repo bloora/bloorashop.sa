@@ -23,12 +23,28 @@
             }
 
             .header .diamond {
-                width: 100px;
-                height: 100px;
-                background: #E8CEB0; /* لون البيج */
+                width: 120px;
+                height: 120px;
+                background: linear-gradient(145deg, #E8CEB0, #d3b89e); /* تدرج لوني للبيج */
                 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* شكل الألماسة */
                 margin: 0 auto;
                 border: 3px solid black; /* الحواف السوداء */
+                box-shadow: 
+                    inset 0 4px 6px rgba(0, 0, 0, 0.2), /* تأثير الظل الداخلي */
+                    0 6px 12px rgba(0, 0, 0, 0.3); /* تأثير الظل الخارجي */
+                position: relative;
+            }
+
+            .header .diamond::before {
+                content: '';
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                width: 80%;
+                height: 80%;
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 70%);
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                z-index: 1;
             }
 
             .header h1 {
@@ -74,8 +90,8 @@
             /* تغيير التصميم للأجهزة الصغيرة */
             @media (max-width: 768px) {
                 .header .diamond {
-                    width: 70px; /* تصغير حجم الألماسة */
-                    height: 70px;
+                    width: 90px; /* تصغير حجم الألماسة */
+                    height: 90px;
                 }
 
                 .header h1 {
