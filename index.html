@@ -6,131 +6,89 @@
     <title>متجر بلورة</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9; /* خلفية بيضاء فاتحة */
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ffc600;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            color: #333; /* النص باللون الأسود */
         }
-
-        .header {
-            background-color: #ffffff; /* خلفية بيضاء */
-            padding: 60px;
-            border-bottom: 2px solid #e0e0e0; /* خط رفيع بلون رمادي فاتح */
-            position: relative;
+        header img {
+            width: 120px;
+            border-radius: 50%;
         }
-
-        .header img {
-            width: 150px; /* عرض الصورة */
-            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-            margin: 0 auto;
-            display: block; /* توسيط الصورة */
+        header h1 {
+            margin: 10px 0 0;
         }
-
-        .header h1 {
-            font-size: 36px; /* حجم الخط */
-            color: #333; /* النص باللون الأسود */
-            margin-top: 20px;
-        }
-
-        .content p {
-            font-size: 24px;
-            color: #555; /* لون نص رقيق يناسب الأبيض */
-            margin-top: 50px;
-        }
-
-        .footer {
-            background-color: #ffffff;
-            padding: 30px;
-            text-align: center;
-            color: #333;
-            border-top: 2px solid #e0e0e0;
-        }
-
-        .btn {
-            background-color: #333; /* زر باللون الأسود */
-            padding: 12px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background-color: #444; /* زر أغمق عند التمرير عليه */
-        }
-
-        .content {
+        .container {
             padding: 20px;
         }
-
-        /* تغيير التصميم للأجهزة الصغيرة */
-        @media (max-width: 768px) {
-            .header img {
-                width: 120px; /* تصغير حجم الصورة */
-            }
-
-            .header h1 {
-                font-size: 28px; /* تصغير حجم الخط */
-            }
-
-            .content p {
-                font-size: 20px; /* تصغير النص */
-            }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        /* تكبير الشعار للأجهزة الكبيرة */
-        @media (min-width: 1200px) {
-            .header img {
-                width: 200px; /* تكبير حجم الصورة */
-            }
-
-            .header h1 {
-                font-size: 42px; /* تكبير النص */
-            }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .product p {
+            color: #666;
+        }
+        .product .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .product button {
+            background-color: #ffc600;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .product button:hover {
+            background-color: #e0a800;
         }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <!-- تضمين صورة الألماسة -->
-        <img src="https://l.top4top.io/p_3304itqnl1.png" alt="ألماسة متجر بلورة">
-        <h1>مرحبًا بكم في متجر بلورة</h1>
+    <header>
+        <img src="logo.jpg" alt="شعار متجر بلورة">
+        <h1>متجر بلورة</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="product1.jpg" alt="منتج 1">
+            <h2>اسم المنتج 1</h2>
+            <p>وصف قصير للمنتج 1</p>
+            <p class="price">50 ريال</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="منتج 2">
+            <h2>اسم المنتج 2</h2>
+            <p>وصف قصير للمنتج 2</p>
+            <p class="price">75 ريال</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <!-- أضف المزيد من المنتجات حسب الحاجة -->
     </div>
-
-    <div class="content">
-        <p id="welcome-message">أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.</p>
-        <a href="#" class="btn">اكتشف المزيد</a>
-    </div>
-
-    <div class="footer">
-        <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
-    </div>
-
-    <script>
-        const messages = [
-            "أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.",
-            "مرحبًا بك في متجر بلورة، حيث تجد كل ما يرضيك.",
-            "شكرًا لزيارتك لمتجر بلورة! نتمنى لك وقتًا ممتعًا.",
-            "أهلًا وسهلًا! هنا تجد أفضل المنتجات بأفضل الأسعار."
-        ];
-
-        let counter = 0;
-        const messageElement = document.getElementById("welcome-message");
-
-        function changeMessage() {
-            messageElement.textContent = messages[counter];
-            counter = (counter + 1) % messages.length;
-        }
-
-        // تغيير الرسالة كل 5 ثواني
-        setInterval(changeMessage, 5000);
-    </script>
-
 </body>
 </html>
