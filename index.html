@@ -9,86 +9,132 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5dc; /* لون بيج */
+            color: #333;
         }
         header {
-            background-color: #ffc600;
-            color: #fff;
+            background-color: #000; /* أسود */
+            color: #f5f5dc; /* بيج */
             padding: 20px;
             text-align: center;
         }
         header img {
-            width: 120px;
+            width: 100px;
             border-radius: 50%;
         }
         header h1 {
-            margin: 10px 0 0;
+            margin: 10px 0;
+            font-size: 24px;
         }
-        .container {
-            padding: 20px;
+        nav {
+            background-color: #333;
+            padding: 10px 0;
         }
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
         }
-        .product img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
+        nav ul li {
+            margin: 0 15px;
         }
-        .product h2 {
-            font-size: 18px;
-            color: #333;
-        }
-        .product p {
-            color: #666;
-        }
-        .product .price {
+        nav ul li a {
+            color: #f5f5dc; /* بيج */
+            text-decoration: none;
             font-size: 16px;
-            font-weight: bold;
-            color: #27ae60;
         }
-        .product button {
-            background-color: #ffc600;
-            color: #fff;
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background-color: #000; /* أسود */
+            color: #f5f5dc; /* بيج */
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
-            font-size: 16px;
         }
-        .product button:hover {
-            background-color: #e0a800;
+        .search-bar button:hover {
+            background-color: #333;
+        }
+        .sections {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .section p {
+            color: #666;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #000;
+            color: #f5f5dc;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="شعار متجر بلورة">
+        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار متجر بلورة">
         <h1>متجر بلورة</h1>
     </header>
-    <div class="container">
-        <div class="product">
-            <img src="product1.jpg" alt="منتج 1">
-            <h2>اسم المنتج 1</h2>
-            <p>وصف قصير للمنتج 1</p>
-            <p class="price">50 ريال</p>
-            <button>أضف إلى السلة</button>
-        </div>
-        <div class="product">
-            <img src="product2.jpg" alt="منتج 2">
-            <h2>اسم المنتج 2</h2>
-            <p>وصف قصير للمنتج 2</p>
-            <p class="price">75 ريال</p>
-            <button>أضف إلى السلة</button>
-        </div>
-        <!-- أضف المزيد من المنتجات حسب الحاجة -->
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">الأقسام</a></li>
+            <li><a href="#">عروض اليوم</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="ابحث عن منتج...">
+        <button>بحث</button>
     </div>
+    <div class="sections">
+        <div class="section">
+            <h2>قسم الملابس</h2>
+            <p>تشكيلة واسعة تناسب جميع الأذواق</p>
+        </div>
+        <div class="section">
+            <h2>الإلكترونيات</h2>
+            <p>أحدث الأجهزة بأفضل الأسعار</p>
+        </div>
+        <div class="section">
+            <h2>العناية الشخصية</h2>
+            <p>منتجات تجميل وعناية عالية الجودة</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 متجر بلورة. جميع الحقوق محفوظة.</p>
+    </footer>
 </body>
 </html>
