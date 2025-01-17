@@ -21,29 +21,11 @@
                 position: relative;
             }
 
-            .header .diamond {
-                width: 120px;
-                height: 120px;
-                background: linear-gradient(145deg, #E8CEB0, #d3b89e); /* تدرج لوني للبيج */
-                clip-path: polygon(50% 0%, 75% 25%, 100% 50%, 75% 75%, 50% 100%, 25% 75%, 0% 50%, 25% 25%); /* شكل الألماسة */
+            .header img {
+                width: 150px; /* عرض الصورة */
+                height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
                 margin: 0 auto;
-                border: 3px solid black; /* الحواف السوداء */
-                box-shadow: 
-                    inset 0 4px 6px rgba(0, 0, 0, 0.2), /* تأثير الظل الداخلي */
-                    0 6px 12px rgba(0, 0, 0, 0.3); /* تأثير الظل الخارجي */
-                position: relative;
-            }
-
-            .header .diamond::before {
-                content: '';
-                position: absolute;
-                top: 10%;
-                left: 10%;
-                width: 80%;
-                height: 80%;
-                background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 70%);
-                clip-path: polygon(50% 0%, 75% 25%, 100% 50%, 75% 75%, 50% 100%, 25% 75%, 0% 50%, 25% 25%);
-                z-index: 1;
+                display: block; /* توسيط الصورة */
             }
 
             .header h1 {
@@ -88,9 +70,8 @@
 
             /* تغيير التصميم للأجهزة الصغيرة */
             @media (max-width: 768px) {
-                .header .diamond {
-                    width: 90px; /* تصغير حجم الألماسة */
-                    height: 90px;
+                .header img {
+                    width: 120px; /* تصغير حجم الصورة */
                 }
 
                 .header h1 {
@@ -104,9 +85,8 @@
 
             /* تكبير الشعار للأجهزة الكبيرة */
             @media (min-width: 1200px) {
-                .header .diamond {
-                    width: 150px; /* تكبير حجم الألماسة */
-                    height: 150px;
+                .header img {
+                    width: 200px; /* تكبير حجم الصورة */
                 }
 
                 .header h1 {
@@ -118,7 +98,8 @@
     <body>
 
         <div class="header">
-            <div class="diamond"></div>
+            <!-- تضمين صورة الألماسة -->
+            <img src="YOUR_IMAGE_URL" alt="ألماسة متجر بلورة">
             <h1>مرحبًا بكم في متجر بلورة</h1>
         </div>
 
