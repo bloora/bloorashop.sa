@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر بلورة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FAADB6;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: inline-block;
+            text-align: center;
+        }
+        .product h2 {
+            font-size: 20px;
+            color: #FAADB6;
+        }
+        .product p {
+            font-size: 18px;
+        }
+        .product .price {
+            font-size: 18px;
+            color: green;
+        }
+        .product .selling-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #E74C3C;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: #3498DB;
+        }
+    </style>
+</head>
+<body>
+    <h1>مرحباً في متجر بلورة</h1>
+    <div id="products">
+        <!-- سيتم تحميل المنتجات هنا -->
+    </div>
+
+    <script>
+        // رابط ملف JSON
+        const jsonUrl = "https://raw.githubusercontent.com/bloora/bloorashop.sa/main/products.json";
+
+        // جلب المنتجات من ملف JSON
+        fetch(jsonUrl)
+            .then(response => response.json())
+            .then(products => {
+                const productsContainer = document.getElementById("products");
+                products.forEach(product => {
+                    const sellingPrice = (product.price * 1.2).toFixed(2); // حساب هامش الربح 20%
+                    const productHTML = `
+                        <div class="product">
+                            <img src="${product.image_url}" alt="${product.name}">
+                            <h2>${product.name}</h2>
+                            <p>السعر الأصلي: ${product.price} ر.س</p>
+                            <p class="selling-price">السعر بعد هامش الربح: ${sellingPrice} ر.س</p>
+                            <p><a href="https://www.amazon.sa/dp/${product.asin}" target="_blank">شراء الآن</a></p>
+                        </div>
+                    `;
+                    productsContainer.innerHTML += productHTML;
+                });
+            })
+            .catch(error => {
+                console.error("خطأ في جلب المنتجات:", error);
+            });
+    </script>
+</body>
+</html>
