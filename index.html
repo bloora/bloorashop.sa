@@ -3,219 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر بلورة</title>
+    <title>بلورة</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+            overflow: hidden;
         }
         header {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #00bcd4; /* لون يتماشى مع الألوان في الصورة */
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: fadeIn 3s ease-in-out infinite;
+        }
+
+        /* تحريك البلورات */
+        .crystals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-image: url('https://i.top4top.io/p_3304ybnwd1.jpg');
             background-size: cover;
             background-position: center;
-            height: 400px;
-            text-align: center;
-            color: white;
-            padding: 80px 0;
+            animation: moveCrystals 30s linear infinite;
         }
-        header h1 {
-            font-size: 3.5em;
-            margin: 0;
+
+        @keyframes moveCrystals {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
-        nav {
-            background-color: #333;
-            padding: 10px 0;
+
+        /* تأثيرات الظهور للصورة */
+        .background-image {
+            width: 100%;
+            height: 100vh; /* يغطي كامل الشاشة */
+            background-image: url('https://i.top4top.io/p_3304ybnwd1.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(60%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
+
         .content {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .product {
-            background-color: white;
-            margin: 10px;
-            width: 24%;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .product img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .product-info {
-            padding: 15px;
+            position: relative;
             text-align: center;
+            padding: 40px;
         }
-        .product-info h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
+
+        .content p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            color: #f1f1f1;
+            margin-top: 20px;
         }
-        .product-info p {
-            color: #555;
-            font-size: 1em;
-            margin-bottom: 5px;
-        }
-        .product-info button {
-            background-color: #1d72b8;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1.2em;
-        }
-        .product-info button:hover {
-            background-color: #155a8a;
-        }
-        .search-bar, .comment-box, .login-box, .cart-button {
-            margin: 20px 0;
-        }
-        .search-bar input, .comment-box textarea {
-            width: 100%;
-            padding: 12px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .search-bar button, .comment-box button {
-            background-color: #1d72b8;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            width: 100%;
-            font-size: 1.1em;
-        }
-        .search-bar button:hover, .comment-box button:hover {
-            background-color: #155a8a;
-        }
-        .cart-button {
-            background-color: #1d72b8;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 200px;
-            margin: 30px auto;
-            display: block;
-            font-size: 1.2em;
-        }
-        .cart-button:hover {
-            background-color: #155a8a;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+
+        /* تنسيق النصوص مع الأجهزة المختلفة */
         @media (max-width: 768px) {
-            .product {
-                width: 48%;
+            h1 {
+                font-size: 2em;
+            }
+            .content p {
+                font-size: 1.2em;
             }
         }
+
         @media (max-width: 480px) {
-            .product {
-                width: 100%;
+            h1 {
+                font-size: 1.5em;
             }
+            .content p {
+                font-size: 1em;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>متجر بلورة</h1>
-    </header>
-
-    <nav>
-        <a href="#home">الرئيسية</a>
-        <a href="#products">المنتجات</a>
-        <a href="#login">تسجيل الدخول</a>
-        <a href="#cart">سلة المشتريات</a>
-        <a href="#search">بحث</a>
-    </nav>
+    <div class="background-image"></div>
 
     <div class="content">
-        <!-- iPhone 16 Pro 128GB -->
-        <div class="product">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 128GB">
-            <div class="product-info">
-                <h3>iPhone 16 Pro 128GB</h3>
-                <p>اللون: فضي، أسود، أزرق</p>
-                <p>السعر الأصلي: 4249 ريال</p>
-                <p>السعر مع الربح (10%): 4673.90 ريال</p>
-                <a href="https://www.amazon.sa" target="_blank">
-                    <button>اشترِ الآن من أمازون</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- iPhone 16 Pro 256GB -->
-        <div class="product">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 256GB">
-            <div class="product-info">
-                <h3>iPhone 16 Pro 256GB</h3>
-                <p>اللون: فضي، أسود، أزرق</p>
-                <p>السعر الأصلي: 4699 ريال</p>
-                <p>السعر مع الربح (10%): 5168.90 ريال</p>
-                <a href="https://www.amazon.sa" target="_blank">
-                    <button>اشترِ الآن من أمازون</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- iPhone 16 Pro 512GB -->
-        <div class="product">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 512GB">
-            <div class="product-info">
-                <h3>iPhone 16 Pro 512GB</h3>
-                <p>اللون: فضي، أسود، أزرق</p>
-                <p>السعر الأصلي: 5979 ريال</p>
-                <p>السعر مع الربح (15%): 6866.85 ريال</p>
-                <a href="https://www.amazon.sa" target="_blank">
-                    <button>اشترِ الآن من أمازون</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- iPhone 16 Pro 1TB -->
-        <div class="product">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71Yg5mf8FAL.AC_SY679.jpg" alt="iPhone 16 Pro 1TB">
-            <div class="product-info">
-                <h3>iPhone 16 Pro 1TB</h3>
-                <p>اللون: فضي، أسود، أزرق</p>
-                <p>السعر الأصلي: 6699 ريال</p>
-                <p>السعر مع الربح (15%): 7693.85 ريال</p>
-                <a href="https://www.amazon.sa" target="_blank">
-                    <button>اشترِ الآن من أمازون</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>© 2025 متجر بلورة. جميع الحقوق محفوظة.</p>
+        <header>
+            <h1>بلورة</h1>
+        </header>
+        <div class="crystals"></div>
+        <p>مرحبًا بك في متجر بلورة! استمتع بتجربة فريدة من نوعها</p>
     </div>
 
 </body>
