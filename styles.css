@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 200px; /* إضافة ارتفاع للهيدر حسب الحاجة */
 }
 
 /* تنسيق خلفية الشعار */
@@ -24,8 +25,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1; /* التأكد من أن الشعار يبقى في المقدمة */
+    object-fit: cover; /* تأكد من أن الصورة تغطي كامل المساحة */
+    z-index: -1; /* تأكد من أن الخلفية في الخلف */
 }
 
 /* تنسيق حركة الشعار */
