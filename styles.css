@@ -8,12 +8,15 @@
 
 /* تنسيق الهيدر */
 .header {
-    background-color: #333;
+    background-image: url('https://b.top4top.io/p_33058wtp81.jpg'); /* الخلفية الجديدة */
+    background-size: cover; /* تغطي كامل المساحة */
+    background-position: center; /* تموضع الصورة في المنتصف */
     color: #fff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 200px; /* تحديد ارتفاع الهيدر */
 }
 
 /* تنسيق حركة الشعار */
@@ -57,16 +60,8 @@
 
 /* تنسيق القسم المبدئي */
 .intro {
-    background-image: url('https://b.top4top.io/p_33058wtp81.jpg'); /* خلفية جديدة */
-    background-size: cover; /* تأكد من أن الصورة تغطي المساحة بالكامل */
-    background-position: center; /* تموضع الصورة في المنتصف */
-    color: #fff;
     text-align: center;
     padding: 50px 20px;
-}
-
-.intro h1, .intro p {
-    display: none; /* إخفاء النصوص الأصلية */
 }
 
 .intro-image {
