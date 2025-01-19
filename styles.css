@@ -1,24 +1,3 @@
-/* تنسيق الأساس */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* تنسيق الهيدر */
-.header {
-    background-image: url('https://b.top4top.io/p_33058wtp81.jpg'); /* الخلفية الجديدة */
-    background-size: cover; /* تغطي كامل المساحة */
-    background-position: center; /* تموضع الصورة في المنتصف */
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 200px; /* تحديد ارتفاع الهيدر */
-}
-
 /* تنسيق حركة الشعار */
 .logo {
     width: 80px;
@@ -27,49 +6,21 @@
     transform-origin: center center;
 }
 
-/* تأثير الحركة */
+/* تأثير الحركة المستمر */
 @keyframes logoAnimation {
-    0%, 100% {
+    0% {
         transform: scale(1); /* الحجم الطبيعي */
     }
-    50% {
+    25% {
         transform: scale(1.2); /* تكبير الشعار قليلاً */
     }
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-}
-
-.navbar li {
-    margin-left: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-}
-
-/* تنسيق القسم المبدئي */
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.intro-image {
-    width: 100%;
-    height: auto;
-}
-
-/* تنسيق الفوتر */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    50% {
+        transform: scale(1); /* العودة للحجم الطبيعي */
+    }
+    75% {
+        transform: scale(1.2); /* تكبير الشعار قليلاً */
+    }
+    100% {
+        transform: scale(1); /* العودة للحجم الطبيعي */
+    }
 }
