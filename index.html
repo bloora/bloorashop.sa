@@ -3,33 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلورة</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>بلورة - متجر إلكتروني</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1; /* خلفية فاتحة */
+            color: #333; /* نص غامق */
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4c4c4c; /* رمادي غامق */
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d0d0d0; /* رمادي فاتح */
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #f4a300; /* لون ذهبي */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            display: inline-block;
+            width: 48%;
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .product select, .product button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .product select {
+            width: 100%;
+        }
+        .product button {
+            background-color: #f4a300;
+            color: #fff;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #d88e00;
+        }
+        footer {
+            background-color: #4c4c4c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="logo">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">المنتجات</a></li>
-                <li><a href="#">التسجيل دخول</a></li>
-                <li><a href="#">سلة المشتريات</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="intro">
-        <div class="intro-content">
-            <div class="image-flip">
-                <img src="https://i.top4top.io/p_3305o1ms51.jpg" alt="صورة المتجر" class="intro-image first">
-                <img src="https://f.top4top.io/p_3306cwxnv1.jpg" alt="صورة المتجر 2" class="intro-image second">
+<header>
+    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="بلورة - شعار المتجر">
+    <h1>متجر بلورة الإلكتروني</h1>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#contact">اتصل بنا</a>
+    <a href="#cart">السلة</a>
+</nav>
+
+<div class="container">
+    <section id="products">
+        <div class="product-container">
+            <!-- المنتج 1 -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81u8lB9krRL.AC_SL1500.jpg" alt="Apple iPhone 16 Pro">
+                <h3>Apple iPhone 16 Pro (256 GB) - تيتانيوم أسود</h3>
+                <p>اختر اللون:</p>
+                <select>
+                    <option value="desert">صحراوي</option>
+                    <option value="white">أبيض</option>
+                    <option value="black">أسود</option>
+                    <option value="natural">طبيعي</option>
+                </select>
+
+                <p>اختر الذاكرة:</p>
+                <select>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                    <option value="512">512 GB</option>
+                    <option value="1tb">1 TB</option>
+                </select>
+
+                <p>السعر الأصلي: <span>5000</span> ريال</p>
+                <p>السعر مع هامش الربح (4%): <span>5200</span> ريال</p>
+
+                <a href="https://amzn.eu/d/9kXJLjw?tag=your_affiliate_id" target="_blank">
+                    <button>أضف إلى السلة</button>
+                </a>
+            </div>
+
+            <!-- المنتج 2 -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/91DpWsRl-5L.AC_SL1500.jpg" alt="منتج 2">
+                <h3>منتج 2</h3>
+                <p>اختر اللون:</p>
+                <select>
+                    <option value="red">أحمر</option>
+                    <option value="blue">أزرق</option>
+                    <option value="black">أسود</option>
+                </select>
+
+                <p>اختر الذاكرة:</p>
+                <select>
+                    <option value="64">64 GB</option>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                </select>
+
+                <p>السعر الأصلي: <span>3000</span> ريال</p>
+                <p>السعر مع هامش الربح (4%): <span>3120</span> ريال</p>
+
+                <a href="https://amzn.eu/d/e7etwSb?tag=your_affiliate_id" target="_blank">
+                    <button>أضف إلى السلة</button>
+                </a>
+            </div>
+
+            <!-- المنتج 3 -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71nKwrWwXbL.AC_SL1500.jpg" alt="منتج 3">
+                <h3>منتج 3</h3>
+                <p>اختر اللون:</p>
+                <select>
+                    <option value="green">أخضر</option>
+                    <option value="yellow">أصفر</option>
+                    <option value="black">أسود</option>
+                </select>
+
+                <p>اختر الذاكرة:</p>
+                <select>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                    <option value="512">512 GB</option>
+                </select>
+
+                <p>السعر الأصلي: <span>4000</span> ريال</p>
+                <p>السعر مع هامش الربح (4%): <span>4160</span> ريال</p>
+
+                <a href="https://amzn.eu/d/h9nWvt4?tag=your_affiliate_id" target="_blank">
+                    <button>أضف إلى السلة</button>
+                </a>
+            </div>
+
+            <!-- المنتج 4 -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71J4-Qkd3nL.AC_SL1500.jpg" alt="منتج 4">
+                <h3>منتج 4</h3>
+                <p>اختر اللون:</p>
+                <select>
+                    <option value="silver">فضي</option>
+                    <option value="black">أسود</option>
+                    <option value="blue">أزرق</option>
+                </select>
+
+                <p>اختر الذاكرة:</p>
+                <select>
+                    <option value="64">64 GB</option>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                </select>
+
+                <p>السعر الأصلي: <span>3500</span> ريال</p>
+                <p>السعر مع هامش الربح (4%): <span>3640</span> ريال</p>
+
+                <a href="https://amzn.eu/d/7D4ewo3?tag=your_affiliate_id" target="_blank">
+                    <button>أضف إلى السلة</button>
+                </a>
             </div>
         </div>
     </section>
+</div>
 
-    <footer class="footer">
-        <p>حقوق الطبع والنشر © 2025 بلورة</p>
-    </footer>
+<footer>
+    <p>حقوق النشر © 2025 بلورة - جميع الحقوق محفوظة</p>
+</footer>
+
 </body>
 </html>
