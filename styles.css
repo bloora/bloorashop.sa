@@ -31,32 +31,43 @@
     padding: 50px 20px;
 }
 
-/* تأثير الانقلاب بين الصور */
+/* تنسيق الصور المتبدلة */
 .image-flip {
-    display: inline-block;
     position: relative;
     width: 100%;
     height: auto;
-    animation: flipImages 4s infinite; /* تحديد سرعة الحركة */
 }
 
 .intro-image {
     width: 100%;
     height: auto;
-    backface-visibility: hidden; /* إخفاء الوجه الخلفي للصورة أثناء التحويل */
-    transition: transform 2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 2s ease-in-out; /* تأثير التلاشي */
 }
 
-/* تحديد الحركة بين الصور */
+.first {
+    opacity: 1;
+}
+
+.second {
+    opacity: 0;
+}
+
+/* تأثير التبديل بين الصور */
 @keyframes flipImages {
     0% {
-        transform: rotateY(0deg);
+        opacity: 1; /* الصورة الأولى تظهر */
     }
     50% {
-        transform: rotateY(180deg);
+        opacity: 0; /* الصورة الأولى تختفي */
+    }
+    51% {
+        opacity: 1; /* الصورة الثانية تظهر */
     }
     100% {
-        transform: rotateY(360deg);
+        opacity: 1; /* الصورة الثانية تظل ظاهرة */
     }
 }
 
@@ -69,4 +80,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.intro-content {
+    animation: flipImages 4s infinite; /* جعل التبديل مستمر */
 }
