@@ -1,0 +1,35 @@
+const prices = {
+  "128": 4408.56,
+  "256": 4886.96,
+  "512": 6218.16,
+  "1TB": 6966.96,
+};
+
+const images = {
+  white: "https://i.top4top.io/p_33053jolk1.jpg",
+  black: "https://k.top4top.io/p_3305i95fl1.jpg",
+  desert: "https://f.top4top.io/p_3305dhjfr1.jpg",
+  natural: "https://i.top4top.io/p_3305lzw241.jpg",
+};
+
+const colors = {
+  white: "تيتانيوم أبيض",
+  black: "تيتانيوم أسود",
+  desert: "تيتانيوم صحراوي",
+  natural: "تيتانيوم طبيعي",
+};
+
+function updateProduct(color) {
+  const mainImage = document.getElementById("main-image");
+  const colorText = document.getElementById("product-color");
+
+  mainImage.src = images[color];
+  colorText.textContent = اللون: ${colors[color]};
+}
+
+function updatePrice() {
+  const storage = document.getElementById("storage").value;
+  const priceText = document.getElementById("product-price");
+
+  priceText.textContent = السعر: ${prices[storage]} ريال;
+}
