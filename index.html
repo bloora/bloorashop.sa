@@ -30,28 +30,25 @@
     </footer>
 </body>
 </html>
-<div class="product-card">
-  <h2 class="product-title">Apple iPhone 16 Pro</h2>
-  <img class="product-main-image" src="https://b.top4top.io/p_3305ic2eo3.jpg" alt="Apple iPhone 16 Pro Colors">
-  
-  <p class="product-description">
-    اختر اللون والسعة التخزينية:
-  </p>
-  
-  <form class="product-form">
-    <div class="options">
-      <label for="color">اللون:</label>
-      <select id="color" name="color">
-        <option value="white">تيتانيوم أبيض</option>
-        <option value="black">تيتانيوم أسود</option>
-        <option value="desert">تيتانيوم صحراوي</option>
-        <option value="natural">تيتانيوم طبيعي</option>
-      </select>
+<div class="product-container">
+  <div class="image-gallery">
+    <img id="main-image" src="https://i.top4top.io/p_33053jolk1.jpg" alt="iPhone 16 Pro" />
+    <div class="thumbnails">
+      <img data-color="white" src="https://i.top4top.io/p_33053jolk1.jpg" alt="White Titanium" onclick="updateProduct('white')">
+      <img data-color="black" src="https://k.top4top.io/p_3305i95fl1.jpg" alt="Black Titanium" onclick="updateProduct('black')">
+      <img data-color="desert" src="https://f.top4top.io/p_3305dhjfr1.jpg" alt="Desert Titanium" onclick="updateProduct('desert')">
+      <img data-color="natural" src="https://i.top4top.io/p_3305lzw241.jpg" alt="Natural Titanium" onclick="updateProduct('natural')">
     </div>
+  </div>
+  <div class="product-details">
+    <h1>Apple iPhone 16 Pro</h1>
+    <p id="product-color">اللون: تيتانيوم أبيض</p>
+    <p id="product-storage">السعة التخزينية: 128 جيجابايت</p>
+    <p id="product-price">السعر: 4,408.56 ريال</p>
 
     <div class="options">
-      <label for="storage">السعة:</label>
-      <select id="storage" name="storage">
+      <label for="storage">اختر السعة:</label>
+      <select id="storage" onchange="updatePrice()">
         <option value="128">128 جيجابايت - 4,408.56 ريال</option>
         <option value="256">256 جيجابايت - 4,886.96 ريال</option>
         <option value="512">512 جيجابايت - 6,218.16 ريال</option>
@@ -59,6 +56,6 @@
       </select>
     </div>
 
-    <button type="submit" class="add-to-cart">أضف إلى السلة</button>
-  </form>
+    <button class="add-to-cart">أضف إلى السلة</button>
+  </div>
 </div>
