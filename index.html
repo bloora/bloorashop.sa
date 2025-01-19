@@ -14,13 +14,23 @@
             margin: 0;
             padding: 0;
         }
+
+        /* خلفية مموجة وملونة */
         header {
-            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
+            background: linear-gradient(to right, #9b4d96, #f98f59, #f9d56b); /* الألوان المتدرجة */
+            height: 256px; /* الارتفاع المطلوب */
+            width: 1024px; /* العرض المطلوب */
             background-size: cover;
             background-position: center;
             padding: 50px 0;
             text-align: center;
             position: relative;
+            margin: 0 auto; /* لتوسيط العنصر */
+        }
+
+        /* إزالة الشعار الذي كان في المنتصف */
+        header img {
+            display: none;
         }
 
         /* حركة نبض الشعار في الزاوية اليمنى */
@@ -154,7 +164,7 @@
 <body>
 
 <header>
-    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة - نبض" />
+    <!-- الشعار لا يظهر هنا الآن -->
     <div class="logo-switch"></div>
 </header>
 
