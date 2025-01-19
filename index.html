@@ -8,46 +8,43 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1; /* خلفية فاتحة */
-            color: #333; /* نص غامق */
+            background-color: #f1f1f1;
+            color: #333;
             direction: rtl;
             margin: 0;
             padding: 0;
-        }
-
-        /* خلفية متجاوبة */
-        header {
-            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
-            background-size: contain; /* تجعل الخلفية تناسب عرض الشاشة */
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 80%; /* العرض 80% من الشاشة */
-            height: auto; /* الارتفاع يعتمد على العرض */
-            position: relative;
-            margin: 0 auto; /* لتوسيط الخلفية */
-            padding-top: 20px;
+            text-align: center;
         }
 
         /* الشعار النابض */
-        .pulse-logo {
+        .pulsing-logo {
             position: absolute;
             top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px; /* حجم الشعار */
-            animation: pulse 1.5s infinite; /* حركة نبض مستمرة */
+            right: 10px;
+            width: 80px;
+            height: auto;
+            animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
-            0% {
-                transform: translateX(-50%) scale(1);
+            0%, 100% {
+                transform: scale(1);
             }
             50% {
-                transform: translateX(-50%) scale(1.1);
+                transform: scale(1.1);
             }
-            100% {
-                transform: translateX(-50%) scale(1);
-            }
+        }
+
+        /* الخلفية المرنة */
+        .background {
+            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 80px; /* ارتفاع ثابت */
+            width: 100%; /* عرض مرن */
+            max-width: 1024px; /* الحد الأقصى للعرض */
+            margin: 0 auto; /* لتوسيط العنصر */
         }
 
         /* الصورتان المتناوبتان */
@@ -55,7 +52,8 @@
             width: 90px; /* حجم الصورة */
             height: auto;
             animation: switchImage 5s infinite; /* تناوب الصور */
-            margin: 0 auto;
+            margin: 10px auto 0;
+            display: block;
         }
 
         @keyframes switchImage {
@@ -67,39 +65,30 @@
             }
         }
 
-        .switch-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: -10px; /* لضبط المسافة بين الخلفية والصور */
-        }
-
         /* تحسين الاستجابة للأجهزة المحمولة */
         @media (max-width: 768px) {
-            header {
-                width: 90%; /* تقليل العرض على الشاشات الصغيرة */
-            }
-            .pulse-logo {
-                width: 80px; /* تقليل حجم الشعار */
+            .background {
+                max-width: 90%; /* تقليل الحجم على الشاشات الصغيرة */
             }
             .logo-switch {
-                width: 80px; /* تقليل حجم الصور */
+                width: 70px; /* تقليل حجم الصور */
+            }
+            .pulsing-logo {
+                width: 60px; /* تقليل حجم الشعار النابض */
             }
         }
     </style>
 </head>
 <body>
 
-<!-- خلفية القسم -->
-<header>
-    <!-- الشعار النابض -->
-    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="pulse-logo" />
-</header>
+<!-- الشعار النابض -->
+<img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار نابض" class="pulsing-logo">
+
+<!-- الخلفية -->
+<div class="background"></div>
 
 <!-- الصورتان المتناوبتان -->
-<div class="switch-container">
-    <img src="https://i.top4top.io/p_3305o1ms51.jpg" alt="صورة متناوبة" class="logo-switch" />
-</div>
+<img src="https://i.top4top.io/p_3305o1ms51.jpg" alt="صورة متناوبة" class="logo-switch" />
 
 </body>
 </html>
