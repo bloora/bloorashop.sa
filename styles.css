@@ -23,23 +23,17 @@
 .logo {
     width: 80px;
     height: auto;
-    animation: logoAnimation 1.5s ease-out forwards;
+    animation: logoAnimation 1.5s ease-out infinite; /* إضافة infinite لجعل الحركة مستمرة */
     transform-origin: center center;
 }
 
 /* تأثير الحركة */
 @keyframes logoAnimation {
-    0% {
-        transform: scale(0); /* الشعار في البداية صغير جداً */
-        opacity: 0; /* الشعار غير مرئي */
+    0%, 100% {
+        transform: scale(1); /* الحجم الطبيعي */
     }
     50% {
         transform: scale(1.2); /* تكبير الشعار قليلاً */
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1); /* العودة للحجم الطبيعي */
-        opacity: 1;
     }
 }
 
@@ -78,97 +72,4 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.product-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-gallery {
-  flex: 1;
-}
-
-.main-image-container img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.thumbnails {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.thumbnails img {
-  width: 60px;
-  height: 60px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-
-.thumbnails img:hover {
-  border-color: #ffcc00;
-}
-
-.product-details {
-  flex: 1;
-}
-
-.color-options {
-  display: flex;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-.color-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #ddd;
-  transition: border-color 0.3s;
-}
-
-.color-circle.white { background-color: #eaeaea; }
-.color-circle.black { background-color: #000; }
-.color-circle.desert { background-color: #d2b48c; }
-.color-circle.natural { background-color: #8b4513; }
-
-.color-circle:hover {
-  border-color: #ffcc00;
-}
-
-.storage-options {
-  margin: 15px 0;
-}
-
-.add-to-cart {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ffcc00;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.add-to-cart:hover {
-  background-color: #ff9900;
 }
