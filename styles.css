@@ -8,48 +8,21 @@
 
 /* تنسيق الهيدر */
 .header {
-    background-image: url('https://b.top4top.io/p_33058wtp81.jpg'); /* الخلفية الجديدة */
-    background-size: cover; /* تغطي كامل المساحة */
-    background-position: center; /* تموضع الصورة في المنتصف */
+    background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 200px; /* تحديد ارتفاع الهيدر */
+    height: 200px;
 }
 
 /* تنسيق حركة الشعار */
 .logo {
     width: 80px;
     height: auto;
-    animation: logoAnimation 1.5s ease-in-out infinite; /* إضافة infinite لجعل الحركة مستمرة */
-    transform-origin: center center;
-}
-
-/* تأثير الحركة المستمر */
-@keyframes logoAnimation {
-    0%, 100% {
-        transform: scale(1); /* العودة للحجم الطبيعي */
-    }
-    50% {
-        transform: scale(1.1); /* تكبير الشعار قليلاً */
-    }
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-}
-
-.navbar li {
-    margin-left: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
 }
 
 /* تنسيق القسم المبدئي */
@@ -58,9 +31,33 @@
     padding: 50px 20px;
 }
 
+/* تأثير الانقلاب بين الصور */
+.image-flip {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    animation: flipImages 4s infinite; /* تحديد سرعة الحركة */
+}
+
 .intro-image {
     width: 100%;
     height: auto;
+    backface-visibility: hidden; /* إخفاء الوجه الخلفي للصورة أثناء التحويل */
+    transition: transform 2s ease-in-out;
+}
+
+/* تحديد الحركة بين الصور */
+@keyframes flipImages {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 /* تنسيق الفوتر */
@@ -72,89 +69,4 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f0; /* رمادي فاتح */
-  color: #4a4a4a; /* رمادي داكن */
-}
-
-.product-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: #fff8f0;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-.image-gallery {
-  flex: 1;
-}
-
-#main-image {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.thumbnails {
-  display: flex;
-  gap: 10px;
-}
-
-.thumbnails img {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-
-.thumbnails img:hover {
-  border-color: #ffcc00;
-}
-
-.product-details {
-  flex: 1;
-}
-
-.product-details h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.options {
-  margin-top: 15px;
-}
-
-label {
-  font-weight: bold;
-}
-
-select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.add-to-cart {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ffcc00;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.add-to-cart:hover {
-  background-color: #ff9900;
 }
