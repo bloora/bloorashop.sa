@@ -22,12 +22,13 @@
             text-align: center;
             position: relative;
         }
+
+        /* حركة نبض الشعار */
         header img {
             width: 150px;
             animation: pulse 1.5s infinite;
         }
 
-        /* حركة نبض الشعار */
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -42,9 +43,9 @@
 
         /* حركة التناوب بين الشعارين */
         .logo-switch {
-            width: 150px;
+            width: 180px; /* تكبير حجم الصورة */
             height: auto;
-            animation: switchImage 3s infinite;
+            animation: switchImage 5s infinite; /* جعل الحركة أبطأ */
             margin: 0 auto;
         }
 
@@ -150,6 +151,7 @@
 <body>
 
 <header>
+    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة - نبض" />
     <div class="logo-switch"></div>
 </header>
 
