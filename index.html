@@ -15,50 +15,46 @@
             padding: 0;
         }
 
-        /* خلفية مموجة وملونة */
+        /* خلفية متجاوبة */
         header {
-            background: linear-gradient(to right, #9b4d96, #f98f59, #f9d56b); /* الألوان المتدرجة */
-            height: 256px; /* الارتفاع المطلوب */
-            width: 1024px; /* العرض المطلوب */
-            background-size: cover;
+            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
+            background-size: contain; /* تجعل الخلفية تناسب عرض الشاشة */
+            background-repeat: no-repeat;
             background-position: center;
-            padding: 50px 0;
-            text-align: center;
+            width: 80%; /* العرض 80% من الشاشة */
+            height: auto; /* الارتفاع يعتمد على العرض */
             position: relative;
-            margin: 0 auto; /* لتوسيط العنصر */
+            margin: 0 auto; /* لتوسيط الخلفية */
+            padding-top: 20px;
         }
 
-        /* إزالة الشعار الذي كان في المنتصف */
-        header img {
-            display: none;
-        }
-
-        /* حركة نبض الشعار في الزاوية اليمنى */
+        /* الشعار النابض */
         .pulse-logo {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 80px; /* حجم الشعار */
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* حجم الشعار */
             animation: pulse 1.5s infinite; /* حركة نبض مستمرة */
         }
 
         @keyframes pulse {
             0% {
-                transform: scale(1);
+                transform: translateX(-50%) scale(1);
             }
             50% {
-                transform: scale(1.1);
+                transform: translateX(-50%) scale(1.1);
             }
             100% {
-                transform: scale(1);
+                transform: translateX(-50%) scale(1);
             }
         }
 
-        /* حركة التناوب بين الشعارين */
+        /* الصورتان المتناوبتان */
         .logo-switch {
-            width: 220px; /* تكبير حجم الصورة المتناوبة */
+            width: 90px; /* حجم الصورة */
             height: auto;
-            animation: switchImage 5s infinite; /* جعل الحركة أبطأ */
+            animation: switchImage 5s infinite; /* تناوب الصور */
             margin: 0 auto;
         }
 
@@ -71,153 +67,39 @@
             }
         }
 
-        nav {
+        .switch-container {
             display: flex;
             justify-content: center;
-            background-color: #d0d0d0; /* رمادي فاتح */
-            padding: 10px 0;
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #f4a300; /* لون ذهبي */
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .product {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-            display: inline-block;
-            width: 48%;
-            box-sizing: border-box;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .product h3 {
-            margin: 10px 0;
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        .product select, .product button {
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .product select {
-            width: 100%;
-        }
-        .product button {
-            background-color: #f4a300;
-            color: #fff;
-            cursor: pointer;
-        }
-        .product button:hover {
-            background-color: #d88e00;
-        }
-        footer {
-            background-color: #4c4c4c;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            align-items: center;
+            margin-top: -10px; /* لضبط المسافة بين الخلفية والصور */
         }
 
         /* تحسين الاستجابة للأجهزة المحمولة */
         @media (max-width: 768px) {
-            header img, .logo-switch {
-                width: 120px;
+            header {
+                width: 90%; /* تقليل العرض على الشاشات الصغيرة */
             }
-            .product {
-                width: 48%;
+            .pulse-logo {
+                width: 80px; /* تقليل حجم الشعار */
             }
-        }
-
-        @media (max-width: 480px) {
-            header img, .logo-switch {
-                width: 100px;
-            }
-            .product {
-                width: 100%;
+            .logo-switch {
+                width: 80px; /* تقليل حجم الصور */
             }
         }
     </style>
 </head>
 <body>
 
+<!-- خلفية القسم -->
 <header>
-    <!-- الشعار لا يظهر هنا الآن -->
-    <div class="logo-switch"></div>
+    <!-- الشعار النابض -->
+    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="pulse-logo" />
 </header>
 
-<!-- الشعار الذي ينبض في الزاوية اليمنى -->
-<img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="pulse-logo" />
-
-<nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#products">المنتجات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#cart">السلة</a>
-</nav>
-
-<div class="container">
-    <section id="products">
-        <div class="product-container">
-            <!-- المنتج 1 -->
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81u8lB9krRL.AC_SL1500.jpg" alt="Apple iPhone 16 Pro">
-                <h3>Apple iPhone 16 Pro (256 GB) - تيتانيوم أسود</h3>
-                <p>اختر اللون:</p>
-                <select>
-                    <option value="desert">صحراوي</option>
-                    <option value="white">أبيض</option>
-                    <option value="black">أسود</option>
-                    <option value="natural">طبيعي</option>
-                </select>
-
-                <p>اختر الذاكرة:</p>
-                <select>
-                    <option value="128">128 GB</option>
-                    <option value="256">256 GB</option>
-                    <option value="512">512 GB</option>
-                    <option value="1tb">1 TB</option>
-                </select>
-
-                <p>السعر الأصلي: <span>5000</span> ريال</p>
-                <p>السعر مع هامش الربح (4%): <span>5200</span> ريال</p>
-
-                <a href="https://amzn.eu/d/9kXJLjw?tag=your_affiliate_id" target="_blank">
-                    <button>أضف إلى السلة</button>
-                </a>
-            </div>
-
-            <!-- المنتجات الأخرى... -->
-
-        </div>
-    </section>
+<!-- الصورتان المتناوبتان -->
+<div class="switch-container">
+    <img src="https://i.top4top.io/p_3305o1ms51.jpg" alt="صورة متناوبة" class="logo-switch" />
 </div>
-
-<footer>
-    <p>حقوق النشر © 2025 بلورة - جميع الحقوق محفوظة</p>
-</footer>
 
 </body>
 </html>
