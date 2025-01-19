@@ -25,33 +25,17 @@
     height: auto;
 }
 
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-}
-
-.navbar li {
-    margin-left: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-}
-
 /* تنسيق القسم المبدئي */
 .intro {
     text-align: center;
     padding: 50px 20px;
 }
 
-/* تنسيق حركة قلب الصور */
-.flip-container {
+/* تنسيق الصور المتبدلة */
+.image-flip {
     position: relative;
     width: 100%;
     height: auto;
-    perspective: 1000px; /* للحصول على تأثير الحركة */
 }
 
 .intro-image {
@@ -60,42 +44,31 @@
     position: absolute;
     top: 0;
     left: 0;
-    backface-visibility: hidden; /* إخفاء الوجه الآخر أثناء الحركة */
-    transition: transform 1s; /* سرعة الحركة */
+    transition: opacity 2s ease-in-out; /* تأثير التلاشي */
 }
 
-.flip-first {
+.first {
     opacity: 1;
 }
 
-.flip-second {
+.second {
     opacity: 0;
-    transform: rotateY(180deg); /* التدوير بزاوية 180 درجة للصورة الثانية */
 }
 
 /* تأثير التبديل بين الصور */
 @keyframes flipImages {
     0% {
-        opacity: 1;
-        transform: rotateY(0deg);
+        opacity: 1; /* الصورة الأولى تظهر */
     }
     50% {
-        opacity: 0;
-        transform: rotateY(180deg);
+        opacity: 0; /* الصورة الأولى تختفي */
     }
     51% {
-        opacity: 1;
-        transform: rotateY(0deg);
+        opacity: 1; /* الصورة الثانية تظهر */
     }
     100% {
-        opacity: 1;
-        transform: rotateY(0deg);
+        opacity: 1; /* الصورة الثانية تظل ظاهرة */
     }
-}
-
-/* إضافة الحركة المستمرة بين الصور */
-.flip-container {
-    animation: flipImages 4s infinite; /* جعل التبديل مستمر */
 }
 
 /* تنسيق الفوتر */
@@ -107,4 +80,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.intro-content {
+    animation: flipImages 4s infinite; /* جعل التبديل مستمر */
 }
