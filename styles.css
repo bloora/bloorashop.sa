@@ -45,14 +45,15 @@
     top: 0;
     left: 0;
     transition: opacity 2s ease-in-out; /* تأثير التلاشي */
+    opacity: 0; /* الصور تكون مخفية في البداية */
 }
 
 .first {
-    opacity: 1;
+    opacity: 1; /* الصورة الأولى تظهر */
 }
 
 .second {
-    opacity: 0;
+    opacity: 0; /* الصورة الثانية تكون مخفية */
 }
 
 /* تأثير التبديل بين الصور */
@@ -71,6 +72,11 @@
     }
 }
 
+/* إضافة الحركة المستمرة بين الصور */
+.image-flip {
+    animation: flipImages 4s infinite; /* جعل التبديل مستمر */
+}
+
 /* تنسيق الفوتر */
 .footer {
     background-color: #333;
@@ -80,8 +86,4 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.intro-content {
-    animation: flipImages 4s infinite; /* جعل التبديل مستمر */
 }
