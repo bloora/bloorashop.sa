@@ -79,3 +79,66 @@
     bottom: 0;
     width: 100%;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f0; /* رمادي فاتح */
+  color: #4a4a4a; /* رمادي داكن */
+}
+
+.product-card {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff8f0; /* بيج فاتح */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-title {
+  font-size: 24px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.product-main-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #6a6a6a;
+}
+
+.options {
+  margin: 10px 0;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4a4a4a; /* رمادي داكن */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #6a6a6a; /* رمادي أفتح */
+}
