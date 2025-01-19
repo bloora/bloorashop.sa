@@ -23,10 +23,13 @@
             position: relative;
         }
 
-        /* حركة نبض الشعار */
-        header img {
-            width: 150px;
-            animation: pulse 1.5s infinite;
+        /* حركة نبض الشعار في الزاوية اليمنى */
+        .pulse-logo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 80px; /* حجم الشعار */
+            animation: pulse 1.5s infinite; /* حركة نبض مستمرة */
         }
 
         @keyframes pulse {
@@ -154,6 +157,9 @@
     <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة - نبض" />
     <div class="logo-switch"></div>
 </header>
+
+<!-- الشعار الذي ينبض في الزاوية اليمنى -->
+<img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="pulse-logo" />
 
 <nav>
     <a href="#home">الرئيسية</a>
