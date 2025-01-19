@@ -15,14 +15,48 @@
             padding: 0;
         }
         header {
-            background-color: #4c4c4c; /* رمادي غامق */
-            color: #fff;
-            padding: 15px 0;
+            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
             text-align: center;
+            position: relative;
         }
         header img {
             width: 150px;
+            animation: pulse 1.5s infinite;
         }
+
+        /* حركة نبض الشعار */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* حركة التناوب بين الشعارين */
+        .logo-switch {
+            width: 150px;
+            height: auto;
+            animation: switchImage 3s infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes switchImage {
+            0%, 50% {
+                content: url('https://i.top4top.io/p_3305o1ms51.jpg');
+            }
+            50%, 100% {
+                content: url('https://f.top4top.io/p_3306cwxnv1.jpg');
+            }
+        }
+
         nav {
             display: flex;
             justify-content: center;
@@ -92,13 +126,31 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+
+        /* تحسين الاستجابة للأجهزة المحمولة */
+        @media (max-width: 768px) {
+            header img, .logo-switch {
+                width: 120px;
+            }
+            .product {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img, .logo-switch {
+                width: 100px;
+            }
+            .product {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="بلورة - شعار المتجر">
-    <h1>متجر بلورة الإلكتروني</h1>
+    <div class="logo-switch"></div>
 </header>
 
 <nav>
@@ -139,83 +191,8 @@
                 </a>
             </div>
 
-            <!-- المنتج 2 -->
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/91DpWsRl-5L.AC_SL1500.jpg" alt="منتج 2">
-                <h3>منتج 2</h3>
-                <p>اختر اللون:</p>
-                <select>
-                    <option value="red">أحمر</option>
-                    <option value="blue">أزرق</option>
-                    <option value="black">أسود</option>
-                </select>
+            <!-- المنتجات الأخرى... -->
 
-                <p>اختر الذاكرة:</p>
-                <select>
-                    <option value="64">64 GB</option>
-                    <option value="128">128 GB</option>
-                    <option value="256">256 GB</option>
-                </select>
-
-                <p>السعر الأصلي: <span>3000</span> ريال</p>
-                <p>السعر مع هامش الربح (4%): <span>3120</span> ريال</p>
-
-                <a href="https://amzn.eu/d/e7etwSb?tag=your_affiliate_id" target="_blank">
-                    <button>أضف إلى السلة</button>
-                </a>
-            </div>
-
-            <!-- المنتج 3 -->
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71nKwrWwXbL.AC_SL1500.jpg" alt="منتج 3">
-                <h3>منتج 3</h3>
-                <p>اختر اللون:</p>
-                <select>
-                    <option value="green">أخضر</option>
-                    <option value="yellow">أصفر</option>
-                    <option value="black">أسود</option>
-                </select>
-
-                <p>اختر الذاكرة:</p>
-                <select>
-                    <option value="128">128 GB</option>
-                    <option value="256">256 GB</option>
-                    <option value="512">512 GB</option>
-                </select>
-
-                <p>السعر الأصلي: <span>4000</span> ريال</p>
-                <p>السعر مع هامش الربح (4%): <span>4160</span> ريال</p>
-
-                <a href="https://amzn.eu/d/h9nWvt4?tag=your_affiliate_id" target="_blank">
-                    <button>أضف إلى السلة</button>
-                </a>
-            </div>
-
-            <!-- المنتج 4 -->
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71J4-Qkd3nL.AC_SL1500.jpg" alt="منتج 4">
-                <h3>منتج 4</h3>
-                <p>اختر اللون:</p>
-                <select>
-                    <option value="silver">فضي</option>
-                    <option value="black">أسود</option>
-                    <option value="blue">أزرق</option>
-                </select>
-
-                <p>اختر الذاكرة:</p>
-                <select>
-                    <option value="64">64 GB</option>
-                    <option value="128">128 GB</option>
-                    <option value="256">256 GB</option>
-                </select>
-
-                <p>السعر الأصلي: <span>3500</span> ريال</p>
-                <p>السعر مع هامش الربح (4%): <span>3640</span> ريال</p>
-
-                <a href="https://amzn.eu/d/7D4ewo3?tag=your_affiliate_id" target="_blank">
-                    <button>أضف إلى السلة</button>
-                </a>
-            </div>
         </div>
     </section>
 </div>
