@@ -1,94 +1,122 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>بلورة - متجر إلكتروني</title>
+    <title>بلورة - الصفحة الرئيسية</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1;
-            color: #333;
-            direction: rtl;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5; /* بيج فاتح */
+            color: #333; /* رمادي داكن */
+        }
+        header {
+            background-color: #999; /* رمادي متوسط */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #ececec; /* رمادي فاتح */
             text-align: center;
+            padding: 50px 20px;
         }
-
-        /* الشعار النابض */
-        .pulsing-logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 80px;
+        .hero h1 {
+            color: #666; /* رمادي متوسط */
+        }
+        .hero p {
+            color: #888; /* رمادي فاتح */
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
             height: auto;
-            animation: pulse 1.5s infinite;
         }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+        .product h3 {
+            padding: 10px;
+            font-size: 1.2em;
+            color: #333;
         }
-
-        /* الخلفية المرنة */
-        .background {
-            background-image: url('https://b.top4top.io/p_33058wtp81.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 80px; /* ارتفاع ثابت */
-            width: 100%; /* عرض مرن */
-            max-width: 1024px; /* الحد الأقصى للعرض */
-            margin: 0 auto; /* لتوسيط العنصر */
+        .product p {
+            padding: 0 10px;
+            font-size: 0.9em;
+            color: #555;
         }
-
-        /* الصورتان المتناوبتان */
-        .logo-switch {
-            width: 90px; /* حجم الصورة */
-            height: auto;
-            animation: switchImage 5s infinite; /* تناوب الصور */
-            margin: 10px auto 0;
-            display: block;
-        }
-
-        @keyframes switchImage {
-            0%, 50% {
-                content: url('https://i.top4top.io/p_3305o1ms51.jpg');
-            }
-            50%, 100% {
-                content: url('https://f.top4top.io/p_3306cwxnv1.jpg');
-            }
-        }
-
-        /* تحسين الاستجابة للأجهزة المحمولة */
-        @media (max-width: 768px) {
-            .background {
-                max-width: 90%; /* تقليل الحجم على الشاشات الصغيرة */
-            }
-            .logo-switch {
-                width: 70px; /* تقليل حجم الصور */
-            }
-            .pulsing-logo {
-                width: 60px; /* تقليل حجم الشعار النابض */
-            }
+        .footer {
+            background-color: #999;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-<!-- الشعار النابض -->
-<img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار نابض" class="pulsing-logo">
-
-<!-- الخلفية -->
-<div class="background"></div>
-
-<!-- الصورتان المتناوبتان -->
-<img src="https://i.top4top.io/p_3305o1ms51.jpg" alt="صورة متناوبة" class="logo-switch" />
-
+    <header>
+        <div>
+            <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة">
+        </div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">المنتجات</a>
+            <a href="#">تسجيل الدخول</a>
+            <a href="#">سلة المشتريات</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>مرحباً بك في متجر بلورة</h1>
+        <p>أفضل المنتجات بأفضل الأسعار</p>
+    </section>
+    <section class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="منتج 1">
+            <h3>اسم المنتج 1</h3>
+            <p>وصف مختصر عن المنتج</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="منتج 2">
+            <h3>اسم المنتج 2</h3>
+            <p>وصف مختصر عن المنتج</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="منتج 3">
+            <h3>اسم المنتج 3</h3>
+            <p>وصف مختصر عن المنتج</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
+    </footer>
 </body>
 </html>
