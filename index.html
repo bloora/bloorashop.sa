@@ -13,10 +13,10 @@
             color: #333; /* رمادي داكن */
         }
         header {
-            background-image: url('https://a.top4top.io/p_3307bc2101.jpg');
+            background-image: url('https://i.ibb.co/DbZK869/background.jpg');
             background-size: cover;
             background-position: center;
-            color: #fff;
+            color: #A6A6A6;
             padding: 10px 20px;
             display: flex;
             align-items: center;
@@ -39,15 +39,45 @@
             text-decoration: underline;
         }
         .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #ececec; /* رمادي فاتح */
-            text-align: center;
-            padding: 50px 20px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
         }
-        .hero h1 {
-            color: #666; /* رمادي متوسط */
+        .hero .flip-container {
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+            position: relative;
         }
-        .hero p {
-            color: #888; /* رمادي فاتح */
+        .hero .flipper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: flip 5s infinite;
+            transform-style: preserve-3d;
+        }
+        .hero .flipper img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            object-fit: cover;
+        }
+        .hero .flipper img:last-child {
+            transform: rotateY(180deg);
+        }
+
+        @keyframes flip {
+            0%, 50% {
+                transform: rotateY(0);
+            }
+            50.01%, 100% {
+                transform: rotateY(180deg);
+            }
         }
         .products {
             display: grid;
@@ -111,8 +141,12 @@
         </nav>
     </header>
     <section class="hero">
-        <h1>مرحباً بك في متجر بلورة</h1>
-        <p>أفضل المنتجات بأفضل الأسعار</p>
+        <div class="flip-container">
+            <div class="flipper">
+                <img src="https://c.top4top.io/p_3307vuqzs1.jpg" alt="الصورة الأولى">
+                <img src="https://d.top4top.io/p_330768h1o2.jpg" alt="الصورة الثانية">
+            </div>
+        </div>
     </section>
     <section class="products">
         <div class="product">
