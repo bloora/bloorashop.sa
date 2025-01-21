@@ -19,73 +19,48 @@
 .logo {
     width: 80px;
     height: auto;
+    animation: pulse 2s infinite ease-in-out; /* تأثير نبض على الشعار */
 }
 
-/* تنسيق السلايدر */
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: 50px auto;
-    overflow: hidden;
-    text-align: center;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    animation: fade 4s infinite;
-}
-
-.slide:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.slide:nth-child(2) {
-    animation-delay: 2s;
-}
-
-.pulse-image {
-    width: 100%;
-    height: auto;
-    animation: pulse 2s infinite ease-in-out;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.text.large {
-    font-size: 30px; /* تكبير النص للصورة الثانية */
-}
-
-/* حركة التبديل بين الصور */
-@keyframes fade {
-    0%, 100% {
-        opacity: 0;
-    }
-    25%, 75% {
-        opacity: 1;
-    }
-}
-
-/* حركة النبض للصورة */
+/* حركة نبض الشعار */
 @keyframes pulse {
     0%, 100% {
-        transform: scale(1); /* الحجم الطبيعي */
+        transform: scale(1);
     }
     50% {
-        transform: scale(1.1); /* التكبير */
+        transform: scale(1.1); /* تكبير الشعار بشكل مستمر */
+    }
+}
+
+/* تنسيق قسم الترحيب */
+.intro {
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.welcome-message {
+    position: relative;
+}
+
+.moving-text {
+    font-size: 30px;
+    font-weight: bold;
+    animation: moveText 5s linear infinite;
+    color: #fff;
+}
+
+/* حركة النص المتحرك */
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
 
