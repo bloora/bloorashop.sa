@@ -1,112 +1,84 @@
-/* تنسيق الأساس */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* الألوان */
+:root {
+    --beige: #f5f5f5;
+    --light-gray: #d3d3d3;
+    --dark-gray: #808080;
+    --dark-text: #555;
+    --button-bg: #f0e1c6;
+    --footer-bg: #333;
 }
 
-/* تنسيق الهيدر */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* تعيين الخطوط والحجم العام */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--beige);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--light-gray);
+    padding: 20px;
+    text-align: left;
+    animation: pulse 1.5s infinite; /* حركة نبض الشعار */
 }
 
 .logo {
-    width: 80px;
+    width: 150px;
     height: auto;
-    animation: pulse 2s infinite ease-in-out; /* تأثير نبض على الشعار */
 }
 
-/* حركة نبض الشعار */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* تكبير الشعار بشكل مستمر */
-    }
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-gray);
+    color: white;
+    width: 250px;
+    height: 100%;
+    padding-top: 50px;
+    text-align: right;
+    z-index: 1000;
 }
 
-/* تنسيق قائمة التنقل */
-.navbar ul {
+nav ul {
     list-style-type: none;
-    display: flex;
-    margin: 0;
     padding: 0;
 }
 
-.navbar li {
-    margin-left: 20px;
+nav li {
+    padding: 10px;
+    border-bottom: 1px solid white;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #fff; /* تغيير اللون إلى الأبيض */
-    font-size: 16px;
+nav li ul {
+    padding-left: 20px;
 }
 
-/* تنسيق قسم الترحيب */
-.intro {
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-/* تنسيق النص المتحرك */
-.welcome-message {
-    position: relative;
-}
-
-.moving-text {
-    font-size: 24px;
-    font-weight: bold;
-    animation: moveText 15s linear infinite; /* جعل الحركة أبطأ */
-    color: #fff;
-    white-space: nowrap; /* منع التفاف النص */
-}
-
-/* حركة النص المتحرك */
-@keyframes moveText {
-    0% {
-        transform: translateX(100%);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-/* تنسيق الفوتر */
-.footer {
-    background-color: #333;
-    color: #fff;
+footer {
+    background-color: var(--footer-bg);
+    color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-/* تحسين التفاعل مع الشاشات الصغيرة (الجوال) */
-@media (max-width: 768px) {
-    .logo {
-        width: 60px;
-    }
+footer p {
+    margin: 0;
+}
 
-    .navbar a {
-        font-size: 14px;
+/* حركة نبض الشعار */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
-
-    .moving-text {
-        font-size: 16px; /* تصغير حجم النص على الجوال */
-        white-space: normal; /* السماح للنص بالتفاف في الجوال */
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
     }
 }
