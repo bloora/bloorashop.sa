@@ -32,6 +32,24 @@
     }
 }
 
+/* تنسيق قائمة التنقل */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* تغيير اللون إلى الأبيض */
+    font-size: 16px;
+}
+
 /* تنسيق قسم الترحيب */
 .intro {
     background-color: #555;
@@ -40,14 +58,15 @@
     padding: 50px 20px;
 }
 
+/* تنسيق النص المتحرك */
 .welcome-message {
     position: relative;
 }
 
 .moving-text {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
-    animation: moveText 5s linear infinite;
+    animation: moveText 10s linear infinite;
     color: #fff;
 }
 
@@ -73,4 +92,19 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* تحسين التفاعل مع الشاشات الصغيرة (الجوال) */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .moving-text {
+        font-size: 18px; /* تصغير حجم النص على الجوال */
+    }
 }
