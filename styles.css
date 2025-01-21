@@ -16,24 +16,27 @@
     align-items: center;
 }
 
-/* تنسيق حركة الشعار */
+/* تنسيق حركة النبض للشعار */
 .logo {
     width: 80px;
     height: auto;
-    animation: logoAnimation 3s ease-in-out infinite; /* حركة مستمرة */
+    animation: pulse 2s ease-in-out infinite; /* حركة النبض المستمرة */
     transform-origin: center center;
 }
 
-/* تأثير الحركة */
-@keyframes logoAnimation {
+/* تأثير حركة النبض */
+@keyframes pulse {
     0% {
         transform: scale(1); /* الحجم الطبيعي */
+        opacity: 1; /* الشفافية الكاملة */
     }
     50% {
-        transform: scale(1.2); /* تكبير الشعار */
+        transform: scale(1.1); /* تكبير الشعار قليلاً */
+        opacity: 0.8; /* تقليل الشفافية */
     }
     100% {
         transform: scale(1); /* العودة للحجم الطبيعي */
+        opacity: 1; /* استعادة الشفافية */
     }
 }
 
