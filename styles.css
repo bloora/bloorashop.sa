@@ -20,7 +20,7 @@
 .logo {
     width: 80px;
     height: auto;
-    animation: logoAnimation 3s ease-in-out infinite;
+    animation: logoAnimation 3s ease-in-out infinite; /* حركة مستمرة */
     transform-origin: center center;
 }
 
