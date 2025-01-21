@@ -3,183 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلورة - الصفحة الرئيسية</title>
+    <title>متجر بلورة</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5; /* بيج فاتح */
-            color: #333; /* رمادي داكن */
-        }
-        header {
-            background-image: url('https://i.ibb.co/DbZK869/background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        header img {
-            height: 50px;
-            animation: pulse 1.5s infinite;
-        }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ececec; /* رمادي فاتح */
-            height: 20vh; /* 40% من ارتفاع الشاشة */
-            overflow: hidden;
-            position: relative;
-        }
-        .hero .flip-container {
-            width: 100%;
-            height: 100%;
-            perspective: 100px;
-            position: relative;
-        }
-        .hero .flipper {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            animation: flip 5s infinite;
-            transform-style: preserve-3d;
-        }
-        .hero .flipper img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            object-fit: cover;
-        }
-        .hero .flipper img:last-child {
-            transform: rotateY(180deg);
+            background-color: #f9f9f9; /* خلفية بيضاء فاتحة */
+            text-align: center;
+            color: #333; /* النص باللون الأسود */
         }
 
-        @keyframes flip {
-            0%, 50% {
-                transform: rotateY(0);
-            }
-            50.01%, 100% {
-                transform: rotateY(180deg);
-            }
+        .header {
+            background-color: #ffffff; /* خلفية بيضاء */
+            padding: 60px;
+            border-bottom: 2px solid #e0e0e0; /* خط رفيع بلون رمادي فاتح */
+            position: relative;
         }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
+
+        .header img {
+            width: 150px; /* عرض الصورة */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+            margin: 0 auto;
+            display: block; /* توسيط الصورة */
         }
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-        }
-        .product h3 {
-            padding: 10px;
-            font-size: 1.2em;
-            color: #333;
-        }
-        .product p {
-            padding: 0 10px;
-            font-size: 0.9em;
-            color: #555;
-        }
-        .footer {
-            background-color: #999;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
+
+        .header h1 {
+            font-size: 36px; /* حجم الخط */
+            color: #333; /* النص باللون الأسود */
             margin-top: 20px;
         }
 
-        /* Animation for pulse */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
+        .content p {
+            font-size: 24px;
+            color: #555; /* لون نص رقيق يناسب الأبيض */
+            margin-top: 50px;
         }
 
-        /* Responsive Adjustments */
+        .footer {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .btn {
+            background-color: #333; /* زر باللون الأسود */
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #444; /* زر أغمق عند التمرير عليه */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* تغيير التصميم للأجهزة الصغيرة */
         @media (max-width: 768px) {
-            .hero {
-                height: 30vh; /* أقل ارتفاع للشاشات الصغيرة */
+            .header img {
+                width: 120px; /* تصغير حجم الصورة */
+            }
+
+            .header h1 {
+                font-size: 28px; /* تصغير حجم الخط */
+            }
+
+            .content p {
+                font-size: 20px; /* تصغير النص */
             }
         }
 
-        @media (max-width: 480px) {
-            .hero {
-                height: 25vh; /* أصغر ارتفاع للشاشات الصغيرة جدًا */
+        /* تكبير الشعار للأجهزة الكبيرة */
+        @media (min-width: 1200px) {
+            .header img {
+                width: 200px; /* تكبير حجم الصورة */
+            }
+
+            .header h1 {
+                font-size: 42px; /* تكبير النص */
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة">
-        </div>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">المنتجات</a>
-            <a href="#">تسجيل الدخول</a>
-            <a href="#">سلة المشتريات</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="flip-container">
-            <div class="flipper">
-                <img src="https://c.top4top.io/p_3307vuqzs1.jpg" alt="الصورة الأولى">
-                <img src="https://d.top4top.io/p_330768h1o2.jpg" alt="الصورة الثانية">
-            </div>
-        </div>
-    </section>
-    <section class="products">
-        <div class="product">
-            <img src="https://via.placeholder.com/300" alt="منتج 1">
-            <h3>اسم المنتج 1</h3>
-            <p>وصف مختصر عن المنتج</p>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/300" alt="منتج 2">
-            <h3>اسم المنتج 2</h3>
-            <p>وصف مختصر عن المنتج</p>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/300" alt="منتج 3">
-            <h3>اسم المنتج 3</h3>
-            <p>وصف مختصر عن المنتج</p>
-        </div>
-    </section>
-    <footer class="footer">
+
+    <div class="header">
+        <!-- تضمين صورة الألماسة -->
+        <img src="https://l.top4top.io/p_3304itqnl1.png" alt="ألماسة متجر بلورة">
+        <h1>مرحبًا بكم في متجر بلورة</h1>
+    </div>
+
+    <div class="content">
+        <p id="welcome-message">أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.</p>
+        <a href="#" class="btn">اكتشف المزيد</a>
+    </div>
+
+    <div class="footer">
         <p>© 2025 متجر بلورة - جميع الحقوق محفوظة</p>
-    </footer>
+    </div>
+
+    <script>
+        const messages = [
+            "أهلاً وسهلاً! استمتع بتجربة تسوق مميزة معنا.",
+            "مرحبًا بك في متجر بلورة، حيث تجد كل ما يرضيك.",
+            "شكرًا لزيارتك لمتجر بلورة! نتمنى لك وقتًا ممتعًا.",
+            "أهلًا وسهلًا! هنا تجد أفضل المنتجات بأفضل الأسعار."
+        ];
+
+        let counter = 0;
+        const messageElement = document.getElementById("welcome-message");
+
+        function changeMessage() {
+            messageElement.textContent = messages[counter];
+            counter = (counter + 1) % messages.length;
+        }
+
+        // تغيير الرسالة كل 5 ثواني
+        setInterval(changeMessage, 5000);
+    </script>
+
 </body>
 </html>
