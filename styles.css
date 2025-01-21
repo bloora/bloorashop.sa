@@ -1,0 +1,84 @@
+/* تنسيق الأساس */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق الهيدر */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* تنسيق حركة الشعار */
+.logo {
+    width: 80px;
+    height: auto;
+    animation: logoAnimation 1.5s ease-out forwards;
+    transform-origin: center center;
+}
+
+/* تأثير الحركة */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0); /* الشعار في البداية صغير جداً */
+        opacity: 0; /* الشعار غير مرئي */
+    }
+    50% {
+        transform: scale(1.2); /* تكبير الشعار قليلاً */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1); /* العودة للحجم الطبيعي */
+        opacity: 1;
+    }
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* تنسيق القسم المبدئي */
+.intro {
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+/* تنسيق الفوتر */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
