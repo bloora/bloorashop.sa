@@ -1,7 +1,7 @@
 // عند تحميل الصفحة
 window.onload = function () {
   // شاشة البداية
-  const loadingScreen = document.getElementById('loading-screen');
+  const loadingScreen = document.getElementById('https://f.top4top.io/p_3309sy5zu1.png');
   const mainContent = document.getElementById('main-content');
 
   // إظهار شاشة البداية لمدة 10 ثوانٍ
