@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +17,13 @@
             background-size: 100% 50px; /* Creating wavy effect with lines */
             color: #333;
             display: flex;
-            flex-direction: column; /* Change to column layout */
+            flex-direction: column;
         }
         .categories {
             width: 100%;
-            background-color: #fff; /* White background */
+            background-color: #fff;
             padding: 20px;
-            border-bottom: 2px solid #000; /* Black border */
+            border-bottom: 2px solid #000;
             position: relative;
             z-index: 10;
         }
@@ -34,51 +34,20 @@
         .categories li {
             margin: 10px 0;
             font-size: 18px;
-            color: #000; /* Black font */
+            color: #000;
             position: relative;
         }
         .categories li:hover {
-            color: #555; /* Dark gray font on hover */
-            cursor: pointer;
-        }
-        .categories .dropdown {
-            position: relative;
-        }
-        .categories .dropdown ul {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 30px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            list-style: none;
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 100;
-        }
-        .categories .dropdown:hover ul {
-            display: block;
-        }
-        .categories .dropdown ul li {
-            margin: 5px 0;
-            font-size: 16px;
             color: #555;
-        }
-        .categories .dropdown ul li:hover {
-            color: #333;
-        }
-        .categories .image-category img {
-            width: 100%;
-            border-radius: 5px;
-            margin-top: 10px;
+            cursor: pointer;
         }
         header {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             padding: 20px;
-            background-color: #fff; /* White background */
-            border-bottom: 2px solid #000; /* Black border */
+            background-color: #fff;
+            border-bottom: 2px solid #000;
             width: 100%;
             position: relative;
             z-index: 5;
@@ -90,22 +59,36 @@
         header h1 {
             font-size: 24px;
             margin-left: 10px;
-            color: #000; /* Black text */
+            color: #000;
+        }
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .language-switcher select {
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .language-switcher img {
+            height: 20px;
+            width: auto;
         }
         .content {
-            margin: 20px 220px 20px 20px; /* Space for header and categories */
+            margin: 20px 220px 20px 20px;
             flex: 1;
         }
-        /* Footer styling */
         footer {
             background-color: #fff;
             text-align: center;
             padding: 20px;
-            border-top: 2px solid #000; /* Black border */
+            border-top: 2px solid #000;
             margin-top: auto;
         }
         footer img {
-            width: 50px; /* Smaller size for footer logo */
+            width: 50px;
             margin-top: 10px;
         }
         footer p {
@@ -116,52 +99,111 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="language-switcher">
+            <select id="languageSelector" onchange="changeLanguage()">
+                <option value="ar" selected>عربي 🇸🇦</option>
+                <option value="en">English 🇬🇧</option>
+            </select>
+        </div>
+        <h1 id="storeName">بـلـوره</h1>
+    </header>
+
     <!-- Categories Column -->
     <div class="categories">
         <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" style="width: 100px; margin-bottom: 20px;">
         <ul>
-            <li class="dropdown">
-                حسابي
+            <li class="dropdown" id="myAccount">حسابي
                 <ul>
-                    <li>تسجيل دخول 👋🏻</li>
-                    <li>إنشاء حساب 🙆🏻‍♀🙆</li>
+                    <li id="login">تسجيل دخول 👋🏻</li>
+                    <li id="register">إنشاء حساب 🙆🏻‍♀🙆</li>
                 </ul>
             </li>
-            <li class="image-category">
-                البقالة والمقاضي
-                <img src="https://h.top4top.io/p_3309vmazf2.jpg" alt="البقالة والمقاضي">
-            </li>
-            <li class="image-category">
-                الجوالات وملحقاتها
-                <img src="https://g.top4top.io/p_33091h3w91.jpg" alt="الجوالات وملحقاتها">
-            </li>
-            <li class="image-category">
-                ألعاب القيمز
-                <img src="https://i.top4top.io/p_3309jt08r3.jpg" alt="ألعاب القيمز">
-            </li>
-            <li>الإلكترونيات</li>
-            <li>الأزياء</li>
-            <li>أدوات المطبخ</li>
-            <li>الأثاث</li>
-            <li>منتجات العناية</li>
-            <li>العروض الخاصة</li>
+            <li id="groceries">البقالة والمقاضي</li>
+            <li id="phones">الجوالات وملحقاتها</li>
+            <li id="games">ألعاب القيمز</li>
+            <li id="electronics">الإلكترونيات</li>
+            <li id="fashion">الأزياء</li>
+            <li id="kitchen">أدوات المطبخ</li>
+            <li id="furniture">الأثاث</li>
+            <li id="careProducts">منتجات العناية</li>
+            <li id="specialOffers">العروض الخاصة</li>
         </ul>
     </div>
-    
-    <!-- Header -->
-    <header>
-        <img src="https://d.top4top.io/p_3309gabgj1.jpg" alt="شعار بلورة">
-        <h1>بـلـوره</h1>
-    </header>
 
-    <div class="content">
-        <!-- Content will go here -->
+    <!-- Content -->
+    <div class="content" id="content">
+        <p>مرحبًا بك في متجر بلورة! اختر فئة للتسوق.</p>
     </div>
-    
+
     <!-- Footer -->
     <footer>
         <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة">
-        <p>حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره <sup>®</sup></p>
+        <p id="footerText">حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره <sup>®</sup></p>
     </footer>
+
+    <!-- JavaScript for Language Switching -->
+    <script>
+        const translations = {
+            en: {
+                storeName: "Ballora",
+                myAccount: "My Account",
+                login: "Login 👋🏻",
+                register: "Register 🙆🏻‍♀🙆",
+                groceries: "Groceries",
+                phones: "Phones & Accessories",
+                games: "Gaming",
+                electronics: "Electronics",
+                fashion: "Fashion",
+                kitchen: "Kitchenware",
+                furniture: "Furniture",
+                careProducts: "Care Products",
+                specialOffers: "Special Offers",
+                footerText: "All rights reserved | 2025 Ballora Store ®"
+            },
+            ar: {
+                storeName: "بـلـوره",
+                myAccount: "حسابي",
+                login: "تسجيل دخول 👋🏻",
+                register: "إنشاء حساب 🙆🏻‍♀🙆",
+                groceries: "البقالة والمقاضي",
+                phones: "الجوالات وملحقاتها",
+                games: "ألعاب القيمز",
+                electronics: "الإلكترونيات",
+                fashion: "الأزياء",
+                kitchen: "أدوات المطبخ",
+                furniture: "الأثاث",
+                careProducts: "منتجات العناية",
+                specialOffers: "العروض الخاصة",
+                footerText: "حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره ®"
+            }
+        };
+
+        function changeLanguage() {
+            const selectedLang = document.getElementById("languageSelector").value;
+            const elements = [
+                { id: "storeName", key: "storeName" },
+                { id: "myAccount", key: "myAccount" },
+                { id: "login", key: "login" },
+                { id: "register", key: "register" },
+                { id: "groceries", key: "groceries" },
+                { id: "phones", key: "phones" },
+                { id: "games", key: "games" },
+                { id: "electronics", key: "electronics" },
+                { id: "fashion", key: "fashion" },
+                { id: "kitchen", key: "kitchen" },
+                { id: "furniture", key: "furniture" },
+                { id: "careProducts", key: "careProducts" },
+                { id: "specialOffers", key: "specialOffers" },
+                { id: "footerText", key: "footerText" }
+            ];
+
+            elements.forEach(element => {
+                const el = document.getElementById(element.id);
+                if (el) el.textContent = translations[selectedLang][element.key];
+            });
+        }
+    </script>
 </body>
 </html>
