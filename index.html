@@ -1,100 +1,140 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر بلورة</title>
-    <link rel="stylesheet" href="style.css">
+    <title>بلورة</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.ibb.co/z5PCJh7/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        header img {
+            height: 60px;
+            width: auto;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #333;
+        }
+        .categories {
+            width: 200px;
+            background-color: rgba(211, 211, 211, 0.8); /* Light gray background */
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        .categories ul {
+            list-style: none;
+        }
+        .categories li {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555; /* Dark gray font */
+            position: relative;
+        }
+        .categories li:hover {
+            color: #333;
+            cursor: pointer;
+        }
+        .categories .dropdown {
+            position: relative;
+        }
+        .categories .dropdown ul {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        .categories .dropdown:hover ul {
+            display: block;
+        }
+        .categories .dropdown ul li {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .categories .dropdown ul li:hover {
+            color: #333;
+        }
+        .categories .image-category img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .content {
+            margin: 100px 220px 20px 20px; /* Space for header and categories */
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- الشريط العلوي مع الخلفية -->
     <header>
-        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" class="logo">
+        <img src="https://d.top4top.io/p_3309gabgj1.jpg" alt="شعار بلورة">
+        <h1>بـلـوره</h1>
     </header>
-
-    <!-- شريط التنقل -->
-    <nav>
+    <div class="categories">
         <ul>
-            <li>حسابي 🙆🏻‍♀🙆
+            <li class="dropdown">
+                حسابي
                 <ul>
-                    <li>أنشاء حساب 👋🏻</li>
-                    <li>تسجيل دخول 🫶🏻</li>
+                    <li>تسجيل دخول 👋🏻</li>
+                    <li>إنشاء حساب 🙆🏻‍♀🙆</li>
                 </ul>
             </li>
-            <li>سلتي 🧺</li>
-            <li>الإلكترونيات 🖥⌚📷📱
-                <ul>
-                    <li>أجهزة المنزل</li>
-                    <li>جوالات وملحقاتها 📲</li>
-                    <li>أجهزة الشعر (لتسريح شعر سريع وبيرفكت 👏🤩)</li>
-                    <li>أجهزة المطبخ (رمضان على الأبواب "أهلاً بشهر البركات")</li>
-                    <li>اللاب والكمبيوتر وملحقاته</li>
-                    <li>الطوابع والماسحات الضوئية</li>
-                </ul>
+            <li class="image-category">
+                البقالة والمقاضي
+                <img src="https://g.top4top.io/p_3309sq0yj1.jpg" alt="البقالة والمقاضي">
             </li>
-            <li>الأزياء والفاشن
-                <ul>
-                    <li>نسائي 🚺
-                        <ul>
-                            <li>عبايات</li>
-                            <li>ملابس المنزل 🏠</li>
-                            <li>فساتين 👗</li>
-                            <li>أطقم وترينقات</li>
-                            <li>ملابس علويه</li>
-                            <li>ملابس سفلية</li>
-                        </ul>
-                    </li>
-                    <li>رجالي 🚹
-                        <ul>
-                            <li>ملابس علوية</li>
-                            <li>ملابس سفلية</li>
-                            <li>قبعات وكابات 🧢</li>
-                            <li>أطقم ⚡</li>
-                            <li>ملابس داخلية</li>
-                        </ul>
-                    </li>
-                    <li>أطفال 🚼
-                        <ul>
-                            <li>أطقم مواليد</li>
-                            <li>ملابس علوية</li>
-                            <li>ملابس سفلية</li>
-                            <li>أطقم ملابس داخلية</li>
-                        </ul>
-                    </li>
-                </ul>
+            <li class="image-category">
+                الجوالات وملحقاتها
+                <img src="https://h.top4top.io/p_3309hzw6q2.jpg" alt="الجوالات وملحقاتها">
             </li>
-            <li>إكسسورات 💍
-                <ul>
-                    <li>ساعات</li>
-                    <li>أطقم</li>
-                    <li>أساور</li>
-                    <li>قبعات 🎩</li>
-                    <li>ملحقات الشعر</li>
-                </ul>
+            <li class="image-category">
+                ألعاب القيمز
+                <img src="https://i.top4top.io/p_3309dijw03.jpg" alt="ألعاب القيمز">
             </li>
-            <li>جوارب 🧦</li>
-            <li>شوزات وسنيكرس
-                <ul>
-                    <li>نسائي 🚺</li>
-                    <li>رجالي 🚹</li>
-                    <li>أطفال 🚼</li>
-                </ul>
-            </li>
-            <li>ملحقات رجال 👨
-                <ul>
-                    <li>اشمغه وغتر</li>
-                    <li>زبيريات</li>
-                    <li>كبك وساعات رجالي</li>
-                </ul>
-            </li>
+            <li>الإلكترونيات</li>
+            <li>الأزياء</li>
+            <li>أدوات المطبخ</li>
+            <li>الأثاث</li>
+            <li>منتجات العناية</li>
+            <li>العروض الخاصة</li>
         </ul>
-    </nav>
-
-    <!-- حقوق الطبع والنشر في أسفل الصفحة -->
-    <footer>
-        <p>حقوق الطبع والنشر © 2025 بلورة</p>
-    </footer>
-
+    </div>
+    <div class="content">
+        <!-- Content will go here -->
+    </div>
 </body>
 </html>
