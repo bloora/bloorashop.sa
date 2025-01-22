@@ -1,179 +1,54 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلورة</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #e0e0e0 20%, #f7f7f7 40%, #e0e0e0 60%, #f7f7f7 80%);
-            background-size: 100% 50px;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-        }
-        .categories {
-            width: 220px;
-            background-color: #fff;
-            padding: 20px;
-            border-right: 2px solid #000;
-            position: fixed;
-            height: 100%;
-        }
-        .categories img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        .categories ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .categories li {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #000;
-            position: relative;
-        }
-        .categories li:hover {
-            color: #555;
-            cursor: pointer;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background-color: #fff;
-            border-bottom: 2px solid #000;
-            width: 100%;
-            position: relative;
-            z-index: 5;
-        }
-        header img {
-            height: 60px;
-            width: auto;
-        }
-        header h1 {
-            font-size: 24px;
-            margin-left: 10px;
-            color: #000;
-        }
-        .language-switcher {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .language-switcher select {
-            padding: 5px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .content {
-            margin: 20px 240px 20px 20px;
-            flex: 1;
-        }
-        footer {
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            border-top: 2px solid #000;
-            margin-top: auto;
-        }
-        footer img {
-            width: 50px;
-            margin-top: 10px;
-        }
-        footer p {
-            margin-top: 10px;
-            color: #333;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر بلورة</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="language-switcher">
-            <select id="languageSelector" onchange="changeLanguage()">
-                <option value="ar" selected>عربي 🇸🇦</option>
-                <option value="en">English 🇬🇧</option>
-            </select>
-        </div>
-        <h1 id="storeName">بـلـوره</h1>
+  <!-- شاشة البداية -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="https://e.top4top.io/p_3309edww31.jpg" alt="شعار بلورة" class="logo-pulse">
+  </div>
+
+  <!-- الصفحة الرئيسية -->
+  <div id="main-content" class="main-content" style="display: none;">
+    <!-- الرأس -->
+    <header class="header">
+      <div class="logo">
+        <img src="logo-ar.png" alt="شعار بلورة">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#products">المنتجات</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <div class="language-switch">
+        <button id="arabic-btn">عربي</button>
+        <button id="english-btn">English</button>
+      </div>
     </header>
 
-    <!-- Categories Column -->
-    <div class="categories">
-        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" style="width: 100px; margin-bottom: 20px;">
+    <!-- باقي المحتوى الرئيسي -->
+    <div class="container">
+      <aside class="sidebar">
+        <h2>الفئات</h2>
         <ul>
-            <li id="groceries">
-                <p>البقالة والمقاضي</p>
-                <img src="https://h.top4top.io/p_3309vmazf2.jpg" alt="البقالة والمقاضي">
-            </li>
-            <li id="phones">
-                <p>الجوالات وملحقاتها</p>
-                <img src="https://g.top4top.io/p_33091h3w91.jpg" alt="الجوالات وملحقاتها">
-            </li>
-            <li id="games">
-                <p>ألعاب القيمز</p>
-                <img src="https://i.top4top.io/p_3309jt08r3.jpg" alt="ألعاب القيمز">
-            </li>
+          <li><a href="#smart-devices">أجهزة ذكية</a></li>
+          <li><a href="#kitchen-tools">أدوات المطبخ</a></li>
+          <li><a href="#clothes">الملابس</a></li>
+          <li><a href="#furniture">الأثاث</a></li>
         </ul>
+      </aside>
+      <main>
+        <h2>مرحباً بك في متجر بلورة!</h2>
+      </main>
     </div>
+  </div>
 
-    <!-- Content -->
-    <div class="content" id="content">
-        <p>مرحبًا بك في متجر بلورة! اختر فئة للتسوق.</p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة">
-        <p id="footerText">حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره <sup>®</sup></p>
-    </footer>
-
-    <!-- JavaScript for Language Switching -->
-    <script>
-        const translations = {
-            en: {
-                storeName: "Ballora",
-                groceries: "Groceries",
-                phones: "Phones & Accessories",
-                games: "Gaming",
-                footerText: "All rights reserved | 2025 Ballora Store ®"
-            },
-            ar: {
-                storeName: "بـلـوره",
-                groceries: "البقالة والمقاضي",
-                phones: "الجوالات وملحقاتها",
-                games: "ألعاب القيمز",
-                footerText: "حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره ®"
-            }
-        };
-
-        function changeLanguage() {
-            const selectedLang = document.getElementById("languageSelector").value;
-            const elements = [
-                { id: "storeName", key: "storeName" },
-                { id: "groceries", key: "groceries" },
-                { id: "phones", key: "phones" },
-                { id: "games", key: "games" },
-                { id: "footerText", key: "footerText" }
-            ];
-
-            elements.forEach(element => {
-                const el = document.getElementById(element.id);
-                if (el) el.querySelector("p").textContent = translations[selectedLang][element.key];
-            });
-        }
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
