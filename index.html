@@ -17,42 +17,19 @@
             background-size: 100% 50px; /* Creating wavy effect with lines */
             color: #333;
             display: flex;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-            background-color: #fff; /* White background */
-            border-bottom: 2px solid #000; /* Black border */
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-        }
-        header img {
-            height: 60px;
-            width: auto;
-        }
-        header h1 {
-            font-size: 24px;
-            margin-left: 10px;
-            color: #000; /* Black text */
+            flex-direction: column; /* Change to column layout */
         }
         .categories {
-            width: 200px;
+            width: 100%;
             background-color: #fff; /* White background */
             padding: 20px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            overflow-y: auto;
-            border-left: 2px solid #000; /* Black border */
+            border-bottom: 2px solid #000; /* Black border */
+            position: relative;
+            z-index: 10;
         }
         .categories ul {
             list-style: none;
+            padding-left: 0;
         }
         .categories li {
             margin: 10px 0;
@@ -95,17 +72,33 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-bottom: 2px solid #000; /* Black border */
+            width: 100%;
+            position: relative;
+            z-index: 5;
+        }
+        header img {
+            height: 60px;
+            width: auto;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #000; /* Black text */
+        }
         .content {
-            margin: 100px 220px 20px 20px; /* Space for header and categories */
+            margin: 20px 220px 20px 20px; /* Space for header and categories */
             flex: 1;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://d.top4top.io/p_3309gabgj1.jpg" alt="شعار بلورة">
-        <h1>بـلـوره</h1>
-    </header>
     <div class="categories">
         <ul>
             <li class="dropdown">
@@ -117,15 +110,15 @@
             </li>
             <li class="image-category">
                 البقالة والمقاضي
-                <img src="https://g.top4top.io/p_3309sq0yj1.jpg" alt="البقالة والمقاضي">
+                <img src="https://h.top4top.io/p_3309vmazf2.jpg" alt="البقالة والمقاضي">
             </li>
             <li class="image-category">
                 الجوالات وملحقاتها
-                <img src="https://h.top4top.io/p_3309hzw6q2.jpg" alt="الجوالات وملحقاتها">
+                <img src="https://g.top4top.io/p_33091h3w91.jpg" alt="الجوالات وملحقاتها">
             </li>
             <li class="image-category">
                 ألعاب القيمز
-                <img src="https://i.top4top.io/p_3309dijw03.jpg" alt="ألعاب القيمز">
+                <img src="https://i.top4top.io/p_3309jt08r3.jpg" alt="ألعاب القيمز">
             </li>
             <li>الإلكترونيات</li>
             <li>الأزياء</li>
@@ -135,6 +128,10 @@
             <li>العروض الخاصة</li>
         </ul>
     </div>
+    <header>
+        <img src="https://d.top4top.io/p_3309gabgj1.jpg" alt="شعار بلورة">
+        <h1>بـلـوره</h1>
+    </header>
     <div class="content">
         <!-- Content will go here -->
     </div>
