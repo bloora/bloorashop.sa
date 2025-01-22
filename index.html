@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بلورة</title>
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,18 +13,23 @@
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #e0e0e0 20%, #f7f7f7 40%, #e0e0e0 60%, #f7f7f7 80%);
-            background-size: 100% 50px; /* Creating wavy effect with lines */
+            background-size: 100% 50px;
             color: #333;
             display: flex;
             flex-direction: column;
         }
         .categories {
-            width: 100%;
+            width: 220px;
             background-color: #fff;
             padding: 20px;
-            border-bottom: 2px solid #000;
-            position: relative;
-            z-index: 10;
+            border-right: 2px solid #000;
+            position: fixed;
+            height: 100%;
+        }
+        .categories img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
         .categories ul {
             list-style: none;
@@ -72,12 +76,8 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .language-switcher img {
-            height: 20px;
-            width: auto;
-        }
         .content {
-            margin: 20px 220px 20px 20px;
+            margin: 20px 240px 20px 20px;
             flex: 1;
         }
         footer {
@@ -114,21 +114,18 @@
     <div class="categories">
         <img src="https://f.top4top.io/p_3304hkhet1.jpg" alt="شعار بلورة" style="width: 100px; margin-bottom: 20px;">
         <ul>
-            <li class="dropdown" id="myAccount">حسابي
-                <ul>
-                    <li id="login">تسجيل دخول 👋🏻</li>
-                    <li id="register">إنشاء حساب 🙆🏻‍♀🙆</li>
-                </ul>
+            <li id="groceries">
+                <p>البقالة والمقاضي</p>
+                <img src="https://h.top4top.io/p_3309vmazf2.jpg" alt="البقالة والمقاضي">
             </li>
-            <li id="groceries">البقالة والمقاضي</li>
-            <li id="phones">الجوالات وملحقاتها</li>
-            <li id="games">ألعاب القيمز</li>
-            <li id="electronics">الإلكترونيات</li>
-            <li id="fashion">الأزياء</li>
-            <li id="kitchen">أدوات المطبخ</li>
-            <li id="furniture">الأثاث</li>
-            <li id="careProducts">منتجات العناية</li>
-            <li id="specialOffers">العروض الخاصة</li>
+            <li id="phones">
+                <p>الجوالات وملحقاتها</p>
+                <img src="https://g.top4top.io/p_33091h3w91.jpg" alt="الجوالات وملحقاتها">
+            </li>
+            <li id="games">
+                <p>ألعاب القيمز</p>
+                <img src="https://i.top4top.io/p_3309jt08r3.jpg" alt="ألعاب القيمز">
+            </li>
         </ul>
     </div>
 
@@ -148,34 +145,16 @@
         const translations = {
             en: {
                 storeName: "Ballora",
-                myAccount: "My Account",
-                login: "Login 👋🏻",
-                register: "Register 🙆🏻‍♀🙆",
                 groceries: "Groceries",
                 phones: "Phones & Accessories",
                 games: "Gaming",
-                electronics: "Electronics",
-                fashion: "Fashion",
-                kitchen: "Kitchenware",
-                furniture: "Furniture",
-                careProducts: "Care Products",
-                specialOffers: "Special Offers",
                 footerText: "All rights reserved | 2025 Ballora Store ®"
             },
             ar: {
                 storeName: "بـلـوره",
-                myAccount: "حسابي",
-                login: "تسجيل دخول 👋🏻",
-                register: "إنشاء حساب 🙆🏻‍♀🙆",
                 groceries: "البقالة والمقاضي",
                 phones: "الجوالات وملحقاتها",
                 games: "ألعاب القيمز",
-                electronics: "الإلكترونيات",
-                fashion: "الأزياء",
-                kitchen: "أدوات المطبخ",
-                furniture: "الأثاث",
-                careProducts: "منتجات العناية",
-                specialOffers: "العروض الخاصة",
                 footerText: "حقوق الطبع والنشر محفوظة | 2025 متجر بلــوره ®"
             }
         };
@@ -184,24 +163,15 @@
             const selectedLang = document.getElementById("languageSelector").value;
             const elements = [
                 { id: "storeName", key: "storeName" },
-                { id: "myAccount", key: "myAccount" },
-                { id: "login", key: "login" },
-                { id: "register", key: "register" },
                 { id: "groceries", key: "groceries" },
                 { id: "phones", key: "phones" },
                 { id: "games", key: "games" },
-                { id: "electronics", key: "electronics" },
-                { id: "fashion", key: "fashion" },
-                { id: "kitchen", key: "kitchen" },
-                { id: "furniture", key: "furniture" },
-                { id: "careProducts", key: "careProducts" },
-                { id: "specialOffers", key: "specialOffers" },
                 { id: "footerText", key: "footerText" }
             ];
 
             elements.forEach(element => {
                 const el = document.getElementById(element.id);
-                if (el) el.textContent = translations[selectedLang][element.key];
+                if (el) el.querySelector("p").textContent = translations[selectedLang][element.key];
             });
         }
     </script>
