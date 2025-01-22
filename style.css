@@ -32,44 +32,13 @@
   }
 }
 
-/* الصفحة الرئيسية */
+/* باقي تصميم الصفحة */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #eee;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.language-switch {
-  display: flex;
-  gap: 10px;
-}
-
-.container {
-  display: flex;
+.main-content {
+  display: none;
 }
