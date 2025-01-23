@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>متجر بلورة</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلورة</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- شاشة البداية -->
-  <div id="loading-screen" class="loading-screen">
-    <img src="https://f.top4top.io/p_3309sy5zu1.png" alt="شعار بلورة" class="logo-pulse">
-  </div>
+    <!-- شاشة البداية -->
+    <div class="splash-screen" id="splash">
+        <div class="logo-container">
+            <img src="logo.png" alt="شعار بلورة" class="logo">
+        </div>
+    </div>
 
-  <!-- الصفحة الرئيسية -->
-  <div id="main-content" class="main-content" style="display: none;">
-    <!-- هنا محتوى المتجر الرئيسي -->
-    <header class="header">
-      <div class="logo">
-        <img src="logo-ar.png" alt="شعار بلورة">
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#products">المنتجات</a></li>
-          <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <header class="header">
+            <div class="logo"><img src="logo.png" alt="شعار بلورة"></div>
+            <nav class="navbar">
+                <a href="#">الرئيسية</a>
+                <a href="#">تسجيل الدخول</a>
+                <a href="#">سلة المشتريات</a>
+                <a href="#">بحث</a>
+            </nav>
+        </header>
 
-  <script src="script.js"></script>
+        <section class="hero-banner">
+            <h1>مرحباً بك في متجر بلورة</h1>
+            <p> كل ما تحتاجه: جوالات، أجهزة مطبخ، ألعاب، ملابس، والمزيد!</p>
+            <button class="cta-button">تسوق الآن</button>
+        </section>
+
+        <section class="categories">
+            <h2>تصفح الفئات</h2>
+            <div class="category-grid">
+                <div class="category-item">جوالات</div>
+                <div class="category-item">أجهزة مطبخ</div>
+                <div class="category-item">ألعاب أطفال</div>
+                <div class="category-item">ملابس</div>
+                <div class="category-item">أثاث منزلي</div>
+                <div class="category-item">ألعاب القيمرز</div>
+                <!-- أضف المزيد من العناصر هنا -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
