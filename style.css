@@ -5,6 +5,7 @@ body {
     background-color: #f5f5f5;
     color: #333;
     text-align: center;
+    overflow: hidden;
 }
 
 /* شاشة البداية */
@@ -28,8 +29,20 @@ body {
     pointer-events: none;
 }
 
-.logo-container .logo {
+.center-content {
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.center-phone {
     width: 150px;
+    height: auto;
 }
 
 /* الهيدر */
@@ -82,35 +95,4 @@ body {
 
 .cta-button:hover {
     background-color: #555;
-}
-
-/* الأقسام */
-.categories {
-    padding: 30px 20px;
-}
-
-.categories h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.category-item {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.category-item:hover {
-    background-color: #f5ebe0;
 }
