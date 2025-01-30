@@ -1,98 +1,130 @@
-/* الخطوط والتهيئة الأساسية */
+/* General Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    text-align: center;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* شاشة البداية */
-.splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f5ebe0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.splash-screen.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.center-content {
-    text-align: center;
-}
-
-.logo-text {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.center-phone {
-    width: 150px;
-    height: auto;
-}
-
-/* الهيدر */
+/* Header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.header .logo img {
-    height: 50px;
+.logo img {
+  height: 50px;
 }
 
-.navbar a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
-/* البانر الرئيسي */
-.hero-banner {
-    background-color: #e5dcc5;
-    padding: 50px 20px;
-    text-align: center;
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-.hero-banner h1 {
-    font-size: 2.5rem;
-    color: #333;
+.icons img {
+  height: 25px;
+  margin-left: 15px;
 }
 
-.hero-banner p {
-    font-size: 1.2rem;
-    margin: 20px 0;
+/* Hero Section */
+.hero {
+  background-color: #e4dcd1;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.cta-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+.hero h1 {
+  color: #333;
+  font-size: 2.5rem;
 }
 
-.cta-button:hover {
-    background-color: #555;
+.hero p {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.hero .btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Products Section */
+.products {
+  padding: 50px 0;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.product .price {
+  color: #333;
+  font-weight: bold;
+}
+
+.product .btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
 }
