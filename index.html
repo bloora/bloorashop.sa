@@ -1,40 +1,75 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلورة</title>
-    <link rel="https://d.top4top.io/p_33103g5dc1.jpg" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BALORA Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- شاشة البداية -->
-    <div class="splash-screen" id="splash">
-        <div class="center-content">
-            <h1 class="logo-text">بلورة</h1>
-            <img src="phone.png" alt="جوال" class="center-phone">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BALORA Logo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">المنتجات</a></li>
+          <li><a href="#">العروض</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="#"><img src="images/cart-icon.png" alt="Cart"></a>
+        <a href="#"><img src="images/user-icon.png" alt="User"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>مرحبًا بك في متجر BALORA</h1>
+      <p>أفضل المنتجات بأفضل الأسعار!</p>
+      <a href="#" class="btn">تسوق الآن</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h2>منتجاتنا</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="images/product1.jpg" alt="Product 1">
+          <h3>منتج 1</h3>
+          <p>وصف قصير للمنتج.</p>
+          <span class="price">50 ريال</span>
+          <button class="btn">أضف إلى السلة</button>
         </div>
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product 2">
+          <h3>منتج 2</h3>
+          <p>وصف قصير للمنتج.</p>
+          <span class="price">80 ريال</span>
+          <button class="btn">أضف إلى السلة</button>
+        </div>
+        <!-- Add more products as needed -->
+      </div>
     </div>
+  </section>
 
-    <!-- المحتوى الرئيسي -->
-    <div class="main-content">
-        <!-- محتوى الموقع بعد شاشة البداية -->
-        <header class="header">
-            <div class="logo"><img src="logo.png" alt="شعار بلورة"></div>
-            <nav class="navbar">
-                <a href="#">الرئيسية</a>
-                <a href="#">تسجيل الدخول</a>
-                <a href="#">سلة المشتريات</a>
-                <a href="#">بحث</a>
-            </nav>
-        </header>
-
-        <section class="hero-banner">
-            <h1>مرحباً بك في متجر بلورة</h1>
-            <p>حيث كل ما تحتاجه: جوالات، أجهزة مطبخ، ألعاب، ملابس، والمزيد!</p>
-            <button class="cta-button">تسوق الآن</button>
-        </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BALORA. جميع الحقوق محفوظة.</p>
     </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
