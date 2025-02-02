@@ -6,6 +6,16 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+.swiper {
+    width: 100%;
+    height: 250px; /* يمكنك تعديل الارتفاع */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .container {
   width: 90%;
