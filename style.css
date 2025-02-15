@@ -44,7 +44,11 @@ body {
   display: flex;
   gap: 20px;
 }
-
+<div class="search-container">
+    <input type="text" id="search-box" placeholder="ابحث عن منتج..." onkeyup="showSuggestions()">
+    <button id="search-btn">🔍</button>
+    <ul id="suggestions-list"></ul>
+</div>
 .nav ul li a {
   text-decoration: none;
   color: #333;
