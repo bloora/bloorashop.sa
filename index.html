@@ -12,6 +12,11 @@
 </video>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+ <div class="search-container">
+    <input type="text" id="search-box" placeholder="ابحث عن منتج..." onkeyup="showSuggestions()">
+    <button id="search-btn">🔍</button>
+    <ul id="suggestions-list"></ul>
+</div>
   <!-- Header -->
   <header class="header">
     <div class="container">
