@@ -33,12 +33,12 @@ body {
   border-bottom: 1px solid #ddd;
 }
 .animated-banner {
-    background: linear-gradient(to right, #bbb, #ddd); /* خلفية متدرجة */
-    color: #333;
+    background: linear-gradient(to right, #ff9f43, #ff6b6b); /* لون جذاب */
+    color: white;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -46,7 +46,7 @@ body {
 
 .animated-banner p {
     display: inline-block;
-    animation: scrollText 10s linear infinite;
+    animation: scrollText 7s linear infinite;
 }
 
 @keyframes scrollText {
@@ -55,6 +55,14 @@ body {
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+/* لجعل التصميم متجاوبًا مع الجوال */
+@media (max-width: 768px) {
+    .animated-banner {
+        font-size: 16px;
+        padding: 10px 0;
     }
 }
 .logo img {
