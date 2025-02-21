@@ -32,7 +32,31 @@ body {
   align-items: center;
   border-bottom: 1px solid #ddd;
 }
+.animated-banner {
+    background: linear-gradient(to right, #bbb, #ddd); /* خلفية متدرجة */
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
 
+.animated-banner p {
+    display: inline-block;
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 .logo img {
   height: 90px;
 }
