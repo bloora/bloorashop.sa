@@ -1,58 +1,60 @@
-Placeholder for adding interactivity (e.g., cart functionality)
-console.log("Welcome to BALORA Store!");
-var swiper = new Swiper(".mySwiper", {
-    loop: true,
-  const products = [
-    "كتب مدرسية", "كتب إسلامية", "كتب إنجليزية", "كتب تطوير الذات",
-    "جوالات سامسونج", "جوالات آيفون", "جوالات شاومي",
-    "ملابس رجالية", "ملابس نسائية", "ملابس أطفال",
-    "أحذية رياضية", "أحذية رسمية", "أحذية نسائية",
-    "أدوات المطبخ", "أجهزة كهربائية", "أثاث المنزل"
-];
+let currentIndex = 0;
 
-function showSuggestions() {
-    let query = document.getElementById("search-box").value.toLowerCase();
-    let suggestionsList = document.getElementById("suggestions-list");
-    suggestionsList.innerHTML = "";
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const categoryContainer = document.querySelector('.category-container');
+const totalCategories = document.querySelectorAll('.category-card').length;
 
-    if (query.length === 0) {
-        suggestionsList.style.display = "none";
-        return;
-    }
+const itemsToShow = 4;
+const itemWidth = 481.25; // عرض كل قسم
 
-    let filteredProducts = products.filter(product => product.toLowerCase().includes(query));
-
-    if (filteredProducts.length > 0) {
-        suggestionsList.style.display = "block";
-        filteredProducts.forEach(product => {
-            let listItem = document.createElement("li");
-            listItem.textContent = product;
-            listItem.onclick = () => {
-                document.getElementById("search-box").value = product;
-                suggestionsList.style.display = "none";
-            };
-            suggestionsList.appendChild(listItem);
-        });
-    } else {
-        suggestionsList.style.display = "none";
-    }
+// تحريك الأقسام عند الضغط على الأزرار
+function moveSlider() {
+    categoryContainer.style.transform = translateX(-${currentIndex * itemWidth}px);
 }
 
-document.addEventListener("click", (event) => {
-    if (!event.target.closest(".search-container")) {
-        document.getElementById("suggestions-list").style.display = "none";
+// زر التالي
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCategories - itemsToShow) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
     }
+    moveSlider();
 });
-    autoplay: {
-        delay: 3000, // تبديل الصورة كل 3 ثوانٍ
-        disableOnInteraction: false
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+
+// زر السابق
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalCategories - itemsToShow;
+    }
+    moveSlider();
+});
+
+// إضافة التمرير باللمس
+let startX = 0;
+let isDragging = false;
+
+categoryContainer.addEventListener('mousedown', (e) => {
+    startX = e.pageX;
+    isDragging = true;
+});
+
+categoryContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const moveX = e.pageX - startX;
+    categoryContainer.style.transform = translateX(${moveX - (currentIndex * itemWidth)}px);
+});
+
+categoryContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    const moveX = parseInt(categoryContainer.style.transform.replace('translateX(', '').replace('px)', ''));
+    if (moveX > 100) {
+        currentIndex--;
+    } else if (moveX < -100) {
+        currentIndex++;
+    }
+    moveSlider();
 });
