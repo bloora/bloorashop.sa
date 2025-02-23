@@ -16,15 +16,11 @@ body {
 .header {
     background-color: #d1cfcf; /* Light Gray */
     padding: 10px 0;
+    text-align: center;
 }
 
-.logo h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase; /* For professionalism */
+.logo img {
+    width: 150px;
 }
 
 .navbar ul {
@@ -71,6 +67,7 @@ body {
 .category-container {
     display: flex;
     transition: transform 0.5s ease;
+    touch-action: pan-y; /* Enable touch scrolling */
 }
 
 .category-card {
