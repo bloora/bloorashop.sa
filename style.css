@@ -8,25 +8,27 @@
 /* General font settings */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light Beige */
+    background-color: #f7f7f7; /* Light Beige */
     color: #333; /* Dark text color */
 }
 
 /* Header */
 .header {
-    background-color: #d1cfcf; /* Light Gray */
-    padding: 10px 0;
+    background-color: #d1d1d1; /* Light Gray */
+    padding: 20px 0;
     text-align: center;
 }
 
 .logo img {
     width: 150px;
+    height: auto;
 }
 
 .navbar ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    margin-top: 20px;
 }
 
 .navbar ul li {
@@ -44,7 +46,7 @@ body {
     color: #5e5e5e; /* Darker hover effect */
 }
 
-/* Categories section */
+/* Categories Section */
 .categories {
     padding: 40px 20px;
     background-color: #fff; /* White */
@@ -57,7 +59,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Category slider container */
+/* Category Slider Container */
 .category-slider {
     position: relative;
     width: 100%;
@@ -98,7 +100,7 @@ body {
     margin-top: 10px;
 }
 
-/* Navigation buttons */
+/* Navigation Buttons */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -122,7 +124,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #d1cfcf; /* Light Gray */
+    background-color: #d1d1d1; /* Light Gray */
     text-align: center;
     padding: 15px;
     margin-top: 40px;
