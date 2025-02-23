@@ -1,1 +1,134 @@
-1fd7c84b666e6644e2db8e30207e1a7881d54f55
+/* Reset default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General font settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light Beige */
+    color: #333; /* Dark text color */
+}
+
+/* Header */
+.header {
+    background-color: #d1cfcf; /* Light Gray */
+    padding: 10px 0;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* For professionalism */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #333; /* Dark links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #5e5e5e; /* Darker hover effect */
+}
+
+/* Categories section */
+.categories {
+    padding: 40px 20px;
+    background-color: #fff; /* White */
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Category slider container */
+.category-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.category-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.category-card {
+    width: 481.25px;
+    height: 500px;
+    margin: 0 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.category-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.category-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Navigation buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #d1cfcf; /* Light Gray */
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #333;
+}
