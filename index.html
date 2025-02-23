@@ -1,73 +1,60 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BALORA Store</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header">
-        <div class="logo">
-            <img src="https://f.top4top.io/p_3341q57zr1.png" alt="BALORA Logo">
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">الأقسام</a></li>
-                <li><a href="#">عروض</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
+let currentIndex = 0;
 
-    <section class="categories">
-        <h2>الأقسام</h2>
-        <div class="category-slider">
-            <button class="prev-btn">&#10094;</button>
-            <div class="category-container" id="category-container">
-                <div class="category-card">
-                    <img src="images/section1.jpg" alt="المقاضي">
-                    <h3>المقاضي</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section2.jpg" alt="الأحذية">
-                    <h3>الأحذية</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section3.jpg" alt="الجولات">
-                    <h3>الجولات</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section4.jpg" alt="البيت والمطبخ">
-                    <h3>البيت والمطبخ</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section5.jpg" alt="أجهزة البيت">
-                    <h3>أجهزة البيت</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section6.jpg" alt="أزياء الرجال">
-                    <h3>أزياء الرجال</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section7.jpg" alt="أزياء النساء">
-                    <h3>أزياء النساء</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section8.jpg" alt="شنط السفر">
-                    <h3>شنط السفر</h3>
-                </div>
-                <!-- يمكنك إضافة المزيد من الأقسام هنا -->
-            </div>
-            <button class="next-btn">&#10095;</button>
-        </div>
-    </section>
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const categoryContainer = document.querySelector('.category-container');
+const totalCategories = document.querySelectorAll('.category-card').length;
 
-    <footer class="footer">
-        <p>&copy; 2025 BALORA Store. جميع الحقوق محفوظة.</p>
-    </footer>
+const itemsToShow = 4;
+const itemWidth = 481.25; // عرض كل قسم
 
-    <script src="script.js"></script>
-</body>
-</html>
+// تحريك الأقسام عند الضغط على الأزرار
+function moveSlider() {
+    categoryContainer.style.transform = translateX(-${currentIndex * itemWidth}px);
+}
+
+// زر التالي
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCategories - itemsToShow) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    moveSlider();
+});
+
+// زر السابق
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalCategories - itemsToShow;
+    }
+    moveSlider();
+});
+
+// إضافة التمرير باللمس
+let startX = 0;
+let isDragging = false;
+
+categoryContainer.addEventListener('mousedown', (e) => {
+    startX = e.pageX;
+    isDragging = true;
+});
+
+categoryContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const moveX = e.pageX - startX;
+    categoryContainer.style.transform = translateX(${moveX - (currentIndex * itemWidth)}px);
+});
+
+categoryContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    const moveX = parseInt(categoryContainer.style.transform.replace('translateX(', '').replace('px)', ''));
+    if (moveX > 100) {
+        currentIndex--;
+    } else if (moveX < -100) {
+        currentIndex++;
+    }
+    moveSlider();
+});
