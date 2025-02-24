@@ -3,74 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BALORA Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BALORA</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <img src="https://e.top4top.io/p_3341zgppu1.jpg" alt="BALORA Logo">
+    <header>
+        <img src="logo.png" alt="BALORA Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث عن المنتجات أو الأقسام...">
+            <button class="search-btn">🔍</button>
+            <button class="camera-btn">📷</button>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">الأقسام</a></li>
-                <li><a href="#">عروض</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <h2>الأقسام</h2>
-        <div class="category-slider">
-            <button class="prev-btn">&#10094;</button>
-            <div class="category-container" id="category-container">
-                <div class="category-card">
-                    <img src="images/section1.jpg" alt="المقاضي">
-                    <h3>المقاضي</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section2.jpg" alt="الأحذية">
-                    <h3>الأحذية</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section3.jpg" alt="الجولات">
-                    <h3>الجولات</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section4.jpg" alt="البيت والمطبخ">
-                    <h3>البيت والمطبخ</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section5.jpg" alt="أجهزة البيت">
-                    <h3>أجهزة البيت</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section6.jpg" alt="أزياء الرجال">
-                    <h3>أزياء الرجال</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section7.jpg" alt="أزياء النساء">
-                    <h3>أزياء النساء</h3>
-                </div>
-                <div class="category-card">
-                    <img src="images/section8.jpg" alt="شنط السفر">
-                    <h3>شنط السفر</h3>
-                </div>
-                <!-- Add more categories here -->
-            </div>
-            <button class="next-btn">&#10095;</button>
-        </div>
+    <section class="promo-video">
+        <video controls>
+            <source src="promo.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2025 BALORA Store. جميع الحقوق محفوظة.</p>
-    </footer>
+    <section class="categories">
+        <div class="scroll-container">
+            <button class="scroll-btn left">⬅</button>
+            <div class="stars">
+                <div class="star">الأزياء النسائية</div>
+                <div class="star">الأزياء الرجالية</div>
+                <div class="star">الإكسسوارات</div>
+                <div class="star">العطور</div>
+            </div>
+            <button class="scroll-btn right">➡</button>
+        </div>
+        <div class="progress-bar"><div class="progress"></div></div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="banner">
+        <img src="banner.jpg" alt="عرض خاص في BALORA">
+    </section>
 </body>
 </html>
