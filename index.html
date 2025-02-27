@@ -7,17 +7,16 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f0e3; /* بيج فاتح */
+            background-color: #fff3e6; /* بيج فاتح يميل للأصفر */
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #3a3a3a; /* لون داكن */
+            background-color: #e74c3c; /* أحمر مميز */
             color: #fff;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
-            background-image: url('ramadan_pattern.png'); /* إضافة زخارف رمضانية */
-            background-repeat: repeat;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -25,10 +24,23 @@
             font-weight: bold;
             color: #f4d03f; /* اللون الذهبي */
         }
+        /* إضافة الفوانيس والعقود والنجوم والهلال */
+        .header-icons {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-icons img {
+            width: 40px;
+            height: 40px;
+        }
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #6d4f1e; /* لون بني داكن */
+            background-color: #c0392b; /* أحمر داكن */
         }
         .nav a {
             color: #fff;
@@ -40,7 +52,7 @@
             background-color: #f4d03f; /* اللون الذهبي */
         }
         .banner {
-            background-color: #3a3a3a; /* لون داكن */
+            background-color: #e74c3c; /* أحمر مميز */
             background-image: url('ramadan_banner.jpg'); /* صورة رمضانية */
             background-size: cover;
             color: #fff;
@@ -88,7 +100,7 @@
             color: #555;
         }
         .footer {
-            background-color: #3a3a3a;
+            background-color: #e74c3c; /* أحمر مميز */
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -98,6 +110,13 @@
 <body>
 
 <header>
+    <div class="header-icons">
+        <!-- فوانيس، عقود مضيئة، نجوم، هلال -->
+        <img src="lantern.png" alt="فانوس"> <!-- صورة فانوس -->
+        <img src="crescent.png" alt="هلال"> <!-- صورة هلال -->
+        <img src="star.png" alt="نجمة"> <!-- صورة نجمة -->
+        <img src="lights.png" alt="عقود مضيئة"> <!-- صورة عقود مضيئة -->
+    </div>
     <h1>متجر بلوره - رمضان كريم</h1>
 </header>
 
