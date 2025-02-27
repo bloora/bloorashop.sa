@@ -7,25 +7,28 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f8f0e3; /* بيج فاتح */
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #3a3a3a;
+            background-color: #3a3a3a; /* لون داكن */
             color: #fff;
             padding: 15px 0;
             text-align: center;
+            background-image: url('ramadan_pattern.png'); /* إضافة زخارف رمضانية */
+            background-repeat: repeat;
         }
         header h1 {
             margin: 0;
             font-size: 36px;
             font-weight: bold;
+            color: #f4d03f; /* اللون الذهبي */
         }
         .nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #6d4f1e; /* لون بني داكن */
         }
         .nav a {
             color: #fff;
@@ -34,10 +37,11 @@
             text-align: center;
         }
         .nav a:hover {
-            background-color: #444;
+            background-color: #f4d03f; /* اللون الذهبي */
         }
         .banner {
-            background-image: url('ramadan_banner.jpg'); /* قم بإضافة صورة رمضانية جميلة */
+            background-color: #3a3a3a; /* لون داكن */
+            background-image: url('ramadan_banner.jpg'); /* صورة رمضانية */
             background-size: cover;
             color: #fff;
             text-align: center;
@@ -50,12 +54,14 @@
         .banner p {
             font-size: 24px;
             margin: 20px 0;
+            font-family: 'Cairo', sans-serif; /* خط عربي جميل */
         }
         .products-section {
             display: flex;
             justify-content: space-around;
             padding: 30px;
             flex-wrap: wrap;
+            background-color: #fff;
         }
         .product-card {
             background-color: #fff;
@@ -66,6 +72,7 @@
             margin: 20px;
             text-align: center;
             padding: 20px;
+            border: 2px solid #f4d03f; /* إطار ذهبي */
         }
         .product-card img {
             width: 100%;
@@ -108,17 +115,17 @@
 
 <section class="products-section">
     <div class="product-card">
-        <img src="product1.jpg" alt="منتج 1"> <!-- قم بإضافة صورة المنتج -->
+        <img src="product1.jpg" alt="منتج 1">
         <h3>منتج 1</h3>
         <p>سعر: 100 ريال</p>
     </div>
     <div class="product-card">
-        <img src="product2.jpg" alt="منتج 2"> <!-- قم بإضافة صورة المنتج -->
+        <img src="product2.jpg" alt="منتج 2">
         <h3>منتج 2</h3>
         <p>سعر: 150 ريال</p>
     </div>
     <div class="product-card">
-        <img src="product3.jpg" alt="منتج 3"> <!-- قم بإضافة صورة المنتج -->
+        <img src="product3.jpg" alt="منتج 3">
         <h3>منتج 3</h3>
         <p>سعر: 200 ريال</p>
     </div>
