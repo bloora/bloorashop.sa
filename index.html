@@ -3,43 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BALORA</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>متجر بلوره - رمضان</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3a3a3a;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        .nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #444;
+        }
+        .banner {
+            background-image: url('ramadan_banner.jpg'); /* قم بإضافة صورة رمضانية جميلة */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .banner h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .products-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 18px;
+            color: #555;
+        }
+        .footer {
+            background-color: #3a3a3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="BALORA Logo" class="logo">
-        <div class="search-bar">
-            <input type="text" placeholder="ابحث عن المنتجات أو الأقسام...">
-            <button class="search-btn">🔍</button>
-            <button class="camera-btn">📷</button>
-        </div>
-    </header>
 
-    <section class="promo-video">
-        <video controls>
-            <source src="promo.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </section>
+<header>
+    <h1>متجر بلوره - رمضان كريم</h1>
+</header>
 
-    <section class="categories">
-        <div class="scroll-container">
-            <button class="scroll-btn left">⬅</button>
-            <div class="stars">
-                <div class="star">الأزياء النسائية</div>
-                <div class="star">الأزياء الرجالية</div>
-                <div class="star">الإكسسوارات</div>
-                <div class="star">العطور</div>
-            </div>
-            <button class="scroll-btn right">➡</button>
-        </div>
-        <div class="progress-bar"><div class="progress"></div></div>
-    </section>
+<nav class="nav">
+    <a href="#">الرئيسية</a>
+    <a href="#">المنتجات</a>
+    <a href="#">العروض الرمضانية</a>
+    <a href="#">اتصل بنا</a>
+</nav>
 
-    <section class="banner">
-        <img src="banner.jpg" alt="عرض خاص في BALORA">
-    </section>
+<section class="banner">
+    <h2>أهلاً بك في متجر بلوره</h2>
+    <p>كل عام وأنتم بخير، تسوقوا الآن بأفضل العروض الرمضانية</p>
+</section>
+
+<section class="products-section">
+    <div class="product-card">
+        <img src="product1.jpg" alt="منتج 1"> <!-- قم بإضافة صورة المنتج -->
+        <h3>منتج 1</h3>
+        <p>سعر: 100 ريال</p>
+    </div>
+    <div class="product-card">
+        <img src="product2.jpg" alt="منتج 2"> <!-- قم بإضافة صورة المنتج -->
+        <h3>منتج 2</h3>
+        <p>سعر: 150 ريال</p>
+    </div>
+    <div class="product-card">
+        <img src="product3.jpg" alt="منتج 3"> <!-- قم بإضافة صورة المنتج -->
+        <h3>منتج 3</h3>
+        <p>سعر: 200 ريال</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 متجر بلوره - جميع الحقوق محفوظة</p>
+</footer>
+
 </body>
 </html>
