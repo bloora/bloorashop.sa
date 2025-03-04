@@ -57,51 +57,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* سلايدر الأقسام */
-.category-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px;
-    white-space: nowrap;
-    scrollbar-width: none; /* إخفاء شريط التمرير */
-}
+التمرير */
 
-.category-slider::-webkit-scrollbar {
-    display: none; /* إخفاء شريط التمرير في كروم */
-}
-
-/* تصميم الهلال حول النص */
-.category {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
-}
-
-/* إنشاء شكل الهلال */
-.category::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: #f8f4e1; /* لون الهلال */
-    border-radius: 50%;
-    box-shadow: inset -20px -10px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* محاذاة النص داخل الهلال */
-.category span {
-    position: relative;
-    z-index: 1;
-}
 /* المنتجات */
 .products {
     text-align: center;
