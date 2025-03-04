@@ -39,6 +39,24 @@ nav ul li a {
     font-weight: bold;
 }
 
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #8d6e63;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* سلايدر الأقسام */
 .category-slider {
     display: flex;
