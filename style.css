@@ -6,7 +6,7 @@ body {
 }
 
 .delivery-bar {
-    background-color: #ff8c00;
+    background-color: #ff8c00; /* برتقالي */
     color: white;
     text-align: center;
     padding: 10px;
@@ -33,6 +33,7 @@ body {
     overflow-x: scroll;
     scroll-behavior: smooth;
     gap: 20px;
+    padding: 10px;
 }
 
 .category {
@@ -44,6 +45,7 @@ body {
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    white-space: nowrap;
 }
 
 .category:hover {
