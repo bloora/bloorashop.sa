@@ -57,9 +57,9 @@ body {
     padding: 20px;
 }
 
-/* عبارة اكتشف … باللون الأسود */
+/* العبارة في الأعلى */
 .discover-text {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
@@ -73,6 +73,7 @@ body {
     position: relative;
 }
 
+/* شريط تمرير الأقسام */
 .category-slider {
     display: flex;
     overflow-x: auto;
@@ -84,11 +85,12 @@ body {
     align-items: center;
 }
 
+/* إخفاء شريط التمرير */
 .category-slider::-webkit-scrollbar {
     display: none;
 }
 
-/* تصميم شكل الهلال */
+/* تصميم الهلال */
 .category {
     position: relative;
     min-width: 120px;
@@ -104,17 +106,14 @@ body {
 
 /* إنشاء شكل الهلال */
 .category::before {
-    content: "";
+    content: "🌙";
     position: absolute;
-    width: 120px;
-    height: 120px;
-    background-color: #e0d5c5;
-    border-radius: 50%;
-    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
-    box-shadow: inset -10px -5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 100px;
+    color: #e0d5c5;
+    line-height: 1;
 }
 
-/* محاذاة النص في منتصف الهلال */
+/* محاذاة النص داخل الهلال */
 .category span {
     position: absolute;
     text-align: center;
@@ -125,23 +124,25 @@ body {
 }
 
 /* خط متحرك */
-.moving-line {
+.category::after {
+    content: "";
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
     width: 50px;
     height: 3px;
     background-color: #333;
     animation: moveLine 1.5s infinite alternate ease-in-out;
+    transform: translateX(-50%);
 }
 
 /* حركة الخط */
 @keyframes moveLine {
     0% {
-        transform: translateX(0);
+        transform: translateX(-50%) scaleX(1);
     }
     100% {
-        transform: translateX(50px);
+        transform: translateX(-50%) scaleX(1.5);
     }
 }
 
@@ -166,8 +167,7 @@ body {
     }
 
     .category::before {
-        width: 100px;
-        height: 100px;
+        font-size: 80px;
     }
 
     .category span {
