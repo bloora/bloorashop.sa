@@ -23,48 +23,58 @@
         </nav>
     </header>
 
-<section class="banner">
-    <h1 style="color: black;">✨ اكتشف عروض رمضان الحصرية في BALORA ✨</h1>
-    <a href="#" class="btn">تسوق الآن</a>
-    </section>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALORA - المتجر</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <!-- عبارة "اكتشف ..." باللون الأسود مع الإيموجي ✨ -->
+    <h2 class="discover-text">اكتشف … ✨</h2>
 
-<section class="categories">
-    <h2>تسوق حسب الفئة</h2>
-    <div class="category-slider">
-        <div class="category"><span>أزياء نسائية</span></div>
-        <div class="category"><span>أجهزة المنزل الصغيرة</span></div>
-        <div class="category"><span>العناية الشخصية</span></div>
-        <div class="category"><span>أزياء رجالية</span></div>
-        <div class="category"><span>أزياء أطفال</span></div>
-        <div class="category"><span>المقاضي</span></div>
-        <div class="category"><span>العطور</span></div>
-        <div class="category"><span>الصحة والتغذية</span></div>
-        <div class="category"><span>المكياج</span></div>
-        <div class="category"><span>العناية بالشعر</span></div>
-        <div class="category"><span>الرياضة</span></div>
-        <div class="category"><span>القيمنق</span></div>
-        <div class="category"><span>مستلزمات المطبخ</span></div>
-        <div class="category"><span>اللابتوب والاكسسوارات</span></div>
-        <div class="category"><span>البيبي</span></div>
-        <div class="category"><span>الإلكترونيات</span></div>
-        <div class="category"><span>الألعاب</span></div>
-        <div class="category"><span>التغذية الرياضية</span></div>
-        <div class="category"><span>النظارات</span></div>
-        <div class="category"><span>الساعات</span></div>
-        <div class="category"><span>مستلزمات السيارة</span></div>
-        <div class="category"><span>الكتب والقراءة</span></div>
-        <div class="category"><span>القرطاسية</span></div>
-        <div class="category"><span>العناية بالبشرة</span></div>
-        <div class="category"><span>رمضانيات</span></div>
+    <!-- سلايدر الأقسام -->
+    <div class="slider-container">
+        <span class="arrow left" onclick="scrollLeft()">&#10094;</span>
+        
+        <div class="category-slider">
+            <div class="category"><span>أزياء نسائية</span><div class="moving-line"></div></div>
+            <div class="category"><span>أجهزة المنزل الصغيرة</span><div class="moving-line"></div></div>
+            <div class="category"><span>العناية الشخصية</span><div class="moving-line"></div></div>
+            <div class="category"><span>أزياء رجالية</span><div class="moving-line"></div></div>
+            <div class="category"><span>أزياء أطفال</span><div class="moving-line"></div></div>
+            <div class="category"><span>المقاضي</span><div class="moving-line"></div></div>
+            <div class="category"><span>العطور</span><div class="moving-line"></div></div>
+            <div class="category"><span>الصحة والتغذية</span><div class="moving-line"></div></div>
+            <div class="category"><span>المكياج</span><div class="moving-line"></div></div>
+            <div class="category"><span>العناية بالشعر</span><div class="moving-line"></div></div>
+            <div class="category"><span>الرياضة</span><div class="moving-line"></div></div>
+            <div class="category"><span>القيمنق</span><div class="moving-line"></div></div>
+            <div class="category"><span>مستلزمات المطبخ</span><div class="moving-line"></div></div>
+            <div class="category"><span>اللابتوب والاكسسوارات</span><div class="moving-line"></div></div>
+            <div class="category"><span>البيبي</span><div class="moving-line"></div></div>
+            <div class="category"><span>الإلكترونيات</span><div class="moving-line"></div></div>
+            <div class="category"><span>الألعاب</span><div class="moving-line"></div></div>
+            <div class="category"><span>التغذية الرياضية</span><div class="moving-line"></div></div>
+            <div class="category"><span>النظارات</span><div class="moving-line"></div></div>
+            <div class="category"><span>الساعات</span><div class="moving-line"></div></div>
+            <div class="category"><span>مستلزمات السيارة</span><div class="moving-line"></div></div>
+            <div class="category"><span>الكتب والقراءة</span><div class="moving-line"></div></div>
+            <div class="category"><span>القرطاسية</span><div class="moving-line"></div></div>
+            <div class="category"><span>العناية بالبشرة</span><div class="moving-line"></div></div>
+            <div class="category"><span>رمضانيات</span><div class="moving-line"></div></div>
+        </div>
+
+        <span class="arrow right" onclick="scrollRight()">&#10095;</span>
     </div>
 
-    <!-- أيقونة التحريك -->
-    <div class="slider-controls">
-        <span onclick="scrollLeft()">&#9665;</span>
-        <span onclick="scrollRight()">&#9655;</span>
-    </div>
-</section>
+    <script src="script.js"></script>
+
+</body>
+</html>
 
     <!-- قسم المنتجات -->
     <section class="products">
