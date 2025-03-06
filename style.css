@@ -1,95 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5e6d3;
-    color: #333;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.top-bar {
-    background-color: #d4a373;
-    color: white;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.top-banner {
+    background-color: #FFD700; /* الذهبي */
+    color: #000;
+    text-align: center;
     padding: 10px;
-    font-weight: bold;
 }
 
-.section-title {
-    font-size: 22px;
-    color: black;
-    margin: 20px 0;
-}
-
-.category-container {
+header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding: 10px 0;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F5F5DC; /* البيج */
 }
 
-.category-slider {
+header .logo img {
+    width: 150px;
+}
+
+header .store-name h1 {
+    color: #2E8B57; /* الأخضر */
+    font-size: 36px;
+}
+
+.category-banner {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.category-banner h2 {
+    font-size: 24px;
+    color: #2E8B57; /* الأخضر */
+}
+
+.categories {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px;
-    white-space: nowrap;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .category-item {
-    background-color: #c49a6c;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50%;
-    font-size: 14px;
-    min-width: 140px;
+    background-color: #FFD700; /* الذهبي */
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #FF6347; /* الأحمر */
+}
+
+.image-banner {
     text-align: center;
-    cursor: pointer;
+    padding: 20px;
 }
 
-.scroll-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    padding: 10px;
-    position: absolute;
+.image-banner img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
 }
 
-.left {
-    left: 10px;
+footer {
+    background-color: #F5F5DC; /* البيج */
+    padding: 20px;
+    text-align: center;
 }
 
-.right {
-    right: 10px;
+footer .contact-options ul {
+    list-style: none;
+    padding: 0;
 }
 
-.whatsapp-btn {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    background-color: #25d366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
+footer .contact-options li {
+    margin: 10px 0;
+}
+
+footer .contact-options a {
+    color: #2E8B57; /* الأخضر */
     text-decoration: none;
-    font-size: 20px;
-    animation: pulse 1.5s infinite;
+    font-weight: bold;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-.contact-info {
-    background-color: #8d6e63;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
+footer .contact-options a:hover {
+    text-decoration: underline;
 }
