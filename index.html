@@ -3,64 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BALORA - متجر الكتروني</title>
-    <link rel="https://bloora.github.io/bloorashop.sa/" href="styles.css">
+    <title>BALORA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- شريط التوصيل السريع -->
-    <div class="delivery-bar">
-        <p>توصيل سريع بخيارات أوسع 💨🚚</p>
+    <!-- شريط متحرك -->
+    <div class="top-bar">
+        <marquee>✨ توصيل سريع بخيارات أوسع 💨🚚 ✨</marquee>
     </div>
 
-    <!-- عبارة اكتشف العروض -->
-    <h2 class="discover-text">✨ اكتشف عروض رمضان الحصرية في BALORA ✨</h2>
+    <!-- عنوان الأقسام -->
+    <h1 class="section-title">✨ اكتشف عروض رمضان الحصرية في BALORA ✨</h1>
 
-    <!-- سلايدر الأقسام -->
-    <div class="slider-container">
-        <span class="arrow left" onclick="scrollLeft()">&#10094;</span>
-        
+    <!-- الأقسام داخل شكل هلال -->
+    <div class="category-container">
+        <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
         <div class="category-slider">
-            <div class="category"><span>أزياء نسائية</span></div>
-            <div class="category"><span>أجهزة المنزل الصغيرة</span></div>
-            <div class="category"><span>العناية الشخصية</span></div>
-            <div class="category"><span>أزياء رجالية</span></div>
-            <div class="category"><span>أزياء أطفال</span></div>
-            <div class="category"><span>المقاضي</span></div>
-            <div class="category"><span>العطور</span></div>
-            <div class="category"><span>الصحة والتغذية</span></div>
-            <div class="category"><span>المكياج</span></div>
-            <div class="category"><span>العناية بالشعر</span></div>
-            <div class="category"><span>الرياضة</span></div>
-            <div class="category"><span>القيمنق</span></div>
-            <div class="category"><span>مستلزمات المطبخ</span></div>
-            <div class="category"><span>اللابتوب والاكسسوارات</span></div>
-            <div class="category"><span>البيبي</span></div>
-            <div class="category"><span>الإلكترونيات</span></div>
-            <div class="category"><span>الألعاب</span></div>
-            <div class="category"><span>التغذية الرياضية</span></div>
-            <div class="category"><span>النظارات</span></div>
-            <div class="category"><span>الساعات</span></div>
-            <div class="category"><span>مستلزمات السيارة</span></div>
-            <div class="category"><span>الكتب والقراءة</span></div>
-            <div class="category"><span>القرطاسية</span></div>
-            <div class="category"><span>العناية بالبشرة</span></div>
-            <div class="category"><span>العناية الشخصية</span></div>
-            <div class="category"><span>رمضانيات</span></div>
+            <div class="category-item">🌙 أزياء نسائية</div>
+            <div class="category-item">🌙 أجهزة المنزل الصغيرة</div>
+            <div class="category-item">🌙 العناية الشخصية</div>
+            <div class="category-item">🌙 أزياء رجالية</div>
+            <div class="category-item">🌙 أزياء أطفال</div>
+            <div class="category-item">🌙 المقاضي</div>
+            <div class="category-item">🌙 العطور</div>
+            <div class="category-item">🌙 الصحة والتغذية</div>
+            <div class="category-item">🌙 المكياج</div>
+            <div class="category-item">🌙 العناية بالشعر</div>
+            <div class="category-item">🌙 الرياضة</div>
+            <div class="category-item">🌙 القيمنق</div>
+            <div class="category-item">🌙 مستلزمات المطبخ</div>
         </div>
-        
-        <span class="arrow right" onclick="scrollRight()">&#10095;</span>
+        <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
     </div>
 
-    <!-- تواصل معنا -->
+    <!-- زر واتساب -->
+    <a href="https://wa.me/your_number" class="whatsapp-btn">📲</a>
+
+    <!-- وسائل التواصل -->
     <div class="contact-info">
-        <a href="https://wa.me/phone_number" class="contact-button">واتساب</a>
-        <a href="mailto:email@example.com" class="contact-button">إيميل</a>
-        <a href="tel:+1234567890" class="contact-button">رقم جوال</a>
-        <a href="https://www.snapchat.com/add/username" class="contact-button">سناب</a>
-        <a href="https://www.instagram.com/username" class="contact-button">إنستغرام</a>
+        <p>📞 رقم الجوال | ✉ الإيميل | 📲 واتساب | 📸 سناب | 📷 إنستغرام</p>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
