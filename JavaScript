@@ -1,9 +1,7 @@
 function scrollLeft() {
-    const container = document.querySelector('.category-slider');
-    container.scrollLeft -= 200; // يمكن تعديل الرقم حسب الحاجة
+    document.querySelector(".category-slider").scrollBy({ left: -200, behavior: "smooth" });
 }
 
 function scrollRight() {
-    const container = document.querySelector('.category-slider');
-    container.scrollLeft += 200; // يمكن تعديل الرقم حسب الحاجة
+    document.querySelector(".category-slider").scrollBy({ left: 200, behavior: "smooth" });
 }
