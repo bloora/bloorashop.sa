@@ -1,7 +1,13 @@
-function scrollLeft() {
-    document.querySelector(".category-slider").scrollBy({ left: -200, behavior: "smooth" });
+/* إضافة حركة تحريك للأقسام */
+.categories {
+    animation: scroll-categories 10s linear infinite;
 }
 
-function scrollRight() {
-    document.querySelector(".category-slider").scrollBy({ left: 200, behavior: "smooth" });
+@keyframes scroll-categories {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
