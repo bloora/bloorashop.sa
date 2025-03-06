@@ -5,46 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BALORA</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- شريط متحرك -->
-    <div class="top-bar">
-        <marquee>✨ توصيل سريع بخيارات أوسع 💨🚚 ✨</marquee>
+    <!-- الشريط العلوي -->
+    <div class="top-banner">
+        <p>توصيل سريع بخيارات أوسع 💨🚚</p>
     </div>
 
-    <!-- عنوان الأقسام -->
-    <h1 class="section-title">✨ اكتشف عروض رمضان الحصرية في BALORA ✨</h1>
-
-    <!-- الأقسام داخل شكل هلال -->
-    <div class="category-container">
-        <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
-        <div class="category-slider">
-            <div class="category-item">🌙 أزياء نسائية</div>
-            <div class="category-item">🌙 أجهزة المنزل الصغيرة</div>
-            <div class="category-item">🌙 العناية الشخصية</div>
-            <div class="category-item">🌙 أزياء رجالية</div>
-            <div class="category-item">🌙 أزياء أطفال</div>
-            <div class="category-item">🌙 المقاضي</div>
-            <div class="category-item">🌙 العطور</div>
-            <div class="category-item">🌙 الصحة والتغذية</div>
-            <div class="category-item">🌙 المكياج</div>
-            <div class="category-item">🌙 العناية بالشعر</div>
-            <div class="category-item">🌙 الرياضة</div>
-            <div class="category-item">🌙 القيمنق</div>
-            <div class="category-item">🌙 مستلزمات المطبخ</div>
+    <!-- الشعار واسم المتجر -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="BALORA">
         </div>
-        <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+        <div class="store-name">
+            <h1>BALORA</h1>
+        </div>
+    </header>
+
+    <!-- بانر الأقسام المتحرك -->
+    <div class="category-banner">
+        <h2>✨ اكتشف عروض رمضان الحصرية في BALORA ✨</h2>
+        <div class="categories">
+            <div class="category-item">أزياء نسائية</div>
+            <div class="category-item">أجهزة المنزل الصغيرة</div>
+            <div class="category-item">العناية الشخصية</div>
+            <div class="category-item">أزياء رجالية</div>
+            <div class="category-item">أزياء أطفال</div>
+            <div class="category-item">المقاضي</div>
+            <!-- أضف الأقسام الأخرى هنا -->
+        </div>
     </div>
 
-    <!-- زر واتساب -->
-    <a href="https://wa.me/your_number" class="whatsapp-btn">📲</a>
-
-    <!-- وسائل التواصل -->
-    <div class="contact-info">
-        <p>📞 رقم الجوال | ✉ الإيميل | 📲 واتساب | 📸 سناب | 📷 إنستغرام</p>
+    <!-- بانر صورة -->
+    <div class="image-banner">
+        <img src="banner-image.jpg" alt="Banner Image">
     </div>
 
+    <!-- طرق التواصل -->
+    <footer>
+        <div class="contact-options">
+            <p>تواصل معنا:</p>
+            <ul>
+                <li><a href="https://wa.me/your-number">واتساب</a></li>
+                <li><a href="mailto:your-email@example.com">إيميل</a></li>
+                <li><a href="tel:+your-phone-number">رقم جوال</a></li>
+                <li><a href="https://www.snapchat.com/add/your-snap">سناب</a></li>
+                <li><a href="https://www.instagram.com/your-instagram">إنستغرام</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
