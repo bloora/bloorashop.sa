@@ -8,43 +8,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- الرأس -->
+    <!-- رأس الصفحة -->
     <header>
-        <nav>
+        <div class="container">
             <div class="logo">
                 <h1>بلــوره</h1>
             </div>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">منتجات</a></li>
-                <li><a href="#">عن المتجر</a></li>
-                <li><a href="#">اتصل بنا</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">منتجات</a></li>
+                    <li><a href="#">عن المتجر</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- المحتوى -->
-    <main>
-        <section class="welcome">
-            <h2>مرحبًا بكم في متجر بلــوره</h2>
-            <p>اكتشف مجموعة من المنتجات المتنوعة والمميزة.</p>
-        </section>
+    <!-- عرض المنتجات -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>استكشف أفضل العروض!</h2>
+            <p>منتجات رائعة بأسعار تنافسية</p>
+            <button class="cta-btn">تسوق الآن</button>
+        </div>
+    </section>
 
-        <section class="products">
-            <h3>منتجاتنا</h3>
-            <div class="product-item">
-                <img src="product-image.jpg" alt="منتج 1">
-                <h4>منتج 1</h4>
-                <p>وصف مختصر للمنتج</p>
-            </div>
-            <div class="product-item">
-                <img src="product-image.jpg" alt="منتج 2">
-                <h4>منتج 2</h4>
-                <p>وصف مختصر للمنتج</p>
-            </div>
-            <!-- أضف المزيد من المنتجات هنا -->
-        </section>
-    </main>
+    <!-- قائمة المنتجات -->
+    <section class="products">
+        <h3>منتجاتنا</h3>
+        <div class="product-item">
+            <img src="product-image.jpg" alt="منتج 1">
+            <h4>منتج 1</h4>
+            <p>وصف مختصر للمنتج</p>
+        </div>
+        <div class="product-item">
+            <img src="product-image.jpg" alt="منتج 2">
+            <h4>منتج 2</h4>
+            <p>وصف مختصر للمنتج</p>
+        </div>
+        <!-- أضف المزيد من المنتجات هنا -->
+    </section>
 
     <!-- التذييل -->
     <footer>
