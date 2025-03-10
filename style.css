@@ -1,74 +1,128 @@
-/* الأساسيات */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* تخصيص الألوان */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFFFFF; /* اللون الأبيض */
-    color: #000000; /* اللون الأسود */
-    text-align: center;
+    background-color: #F8F7F2; /* بيج */
+    color: #32620E; /* أخضر */
+    margin: 0;
+    padding: 0;
 }
 
-/* الشعار */
+/* تنسيق الرأس */
 header {
-    background-color: #FFD700; /* الذهبي */
-    padding: 20px;
-}
-
-.logo span {
-    font-size: 36px;
-    font-weight: bold;
-    color: #4CAF50; /* الأخضر */
-    text-transform: uppercase;
-}
-
-.ramadan-icons img {
-    width: 20px;
-    margin: 0 10px;
-}
-
-/* الأقسام */
-.categories {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-}
-
-.category {
-    background-color: #808080; /* الرمادي */
-    padding: 15px 25px;
-    border-radius: 10px;
-    width: 200px;
+    background-color: #473C38; /* بني */
+    color: #F8F7F2; /* بيج */
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 3px solid #B61414; /* أحمر */
 }
 
-.category h2 {
-    color: #4CAF50; /* الأخضر */
+header .logo h1 {
+    font-size: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #F8F7F2; /* بيج */
+    text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
 }
 
-/* الترويج */
-.promotion-banner {
-    background-color: #4CAF50; /* الأخضر */
-    color: #FFFFFF; /* الأبيض */
+nav ul li a:hover {
+    color: #EEBA2B; /* ذهبي */
+}
+
+/* تنسيق الأقسام الرئيسية */
+main {
     padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
 }
 
-/* إضافة لمسات رمضانية */
-.promotion-banner {
-    font-family: "Times New Roman", serif;
+.welcome {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* فئات متحركة (اختياري) */
-.category:hover {
-    background-color: #FFD700; /* الذهبي عند المرور */
+.welcome h2 {
+    color: #32620E; /* أخضر */
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #F8F7F2; /* بيج */
+    border: 2px solid #473C38; /* بني */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h4 {
+    color: #32620E; /* أخضر */
+    margin-top: 10px;
+}
+
+.product-item p {
+    color: #808080; /* رمادي */
+}
+
+/* تخصيص الأزرار */
+button {
+    background-color: #EEBA2B; /* ذهبي */
+    color: #F8F7F2; /* بيج */
+    border: 2px solid #473C38; /* بني */
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #32620E; /* أخضر */
+    border-color: #EEBA2B; /* ذهبي */
+}
+
+/* تخصيص التذييل */
+footer {
+    background-color: #473C38; /* بني */
+    color: #F8F7F2; /* بيج */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid #B61414; /* أحمر */
+}
+
+footer p {
+    font-size: 14px;
+    color: #808080; /* رمادي */
+}
+
+/* إضافة النقوشات أو الزخارف */
+body::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path-to-your-pattern-image'); /* يمكنك وضع رابط صورة النقوش */
+    opacity: 0.1;
+    z-index: -1;
 }
